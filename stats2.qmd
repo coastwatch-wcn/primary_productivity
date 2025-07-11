@@ -208,19 +208,19 @@ We then count how often each combination occurs across all pixels to build a 3×
 
 Where:
 
-- **\( P_o \)** = observed agreement (proportion of pixels where legacy and interim agree):
+- **P~o~** = observed agreement (proportion of pixels where legacy and interim agree):
 
 $$
 P_o = \frac{a + e + i}{N}
 $$
 
-- **\( P_e \)** = expected agreement by chance:
+- **P~e~** = expected agreement by chance:
 
 $$
 P_e = \frac{(a + b + c)(a + d + g) + (d + e + f)(b + e + h) + (g + h + i)(c + f + i)}{N^2}
 $$
 
-- **\( N \)** = total number of valid pixels (sum of all cells):
+- **N** = total number of valid pixels (sum of all cells):
 
 $$
 N = a + b + c + d + e + f + g + h + i
