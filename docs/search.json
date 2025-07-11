@@ -88,7 +88,7 @@
     "href": "index.html#download-interim-product-data",
     "title": "\nVIIRS-based Primary Productivity Products\n",
     "section": "Download Interim Product Data",
-    "text": "Download Interim Product Data\nThe two interim product lines are routinely produced and are available online as daily and monthly composites via the West Coast Node ERDDAP data server.\n\n\nVIIRS SNPP Interim Primary Productivity\n\n\n\nDaily Composites\n\n\nMonthly Composites\n\n\n\nVIIRS NOAA-20 Interim Primary Productivity\n\n\n\nDaily Composites\n\n\nMonthly Composites"
+    "text": "Download Interim Product Data\nThe two interim product lines are routinely produced and are available online as daily and monthly composites via the West Coast Node ERDDAP data server.\n\n\nVIIRS SNPP Interim Primary Productivity\n\n\n\nDaily Composites, Near Real-time\n\n\nDaily Composites, Science Quality\n\n\nMonthly Composites, Science Quality\n\n\n\nVIIRS NOAA-20 Interim Primary Productivity\n\n\n\nDaily Composites, Near Real-time\n\n\nDaily Composites, Science Quality\n\n\nMonthly Composites, Science Quality"
   },
   {
     "objectID": "index.html#project-team-and-funding",
@@ -102,7 +102,7 @@
     "href": "index.html#references",
     "title": "\nVIIRS-based Primary Productivity Products\n",
     "section": "References",
-    "text": "References\nBehrenfeld and Falkowski. (1997) Photosynthetic rates derived from satellite-based chlorophyll concentration Limnol. Oceanogr. 42:1-20."
+    "text": "References\nBehrenfeld and Falkowski. (1997) Photosynthetic rates derived from satellite-based chlorophyll concentration. Limnol. Oceanogr. 42:1-20."
   },
   {
     "objectID": "algorithm.html",
@@ -158,7 +158,7 @@
     "href": "user_resources.html#download-interim-product-data",
     "title": "\nUser Resources\n",
     "section": "Download Interim Product Data",
-    "text": "Download Interim Product Data\n\n\nVIIRS SNPP Interim Primary Productivity\n\n\n\nDaily Composites\n\n\nMonthly Composites\n\n\n\nVIIRS NOAA-20 Interim Primary Productivity\n\n\n\nDaily Composites\n\n\nMonthly Composites"
+    "text": "Download Interim Product Data\n\n\nVIIRS SNPP Interim Primary Productivity\n\n\n\nDaily Composites, Near Real-time\n\n\nDaily Composites, Science Quality\n\n\nMonthly Composites, Science Quality\n\n\n\nVIIRS NOAA-20 Interim Primary Productivity\n\n\n\nDaily Composites, Near Real-time\n\n\nDaily Composites, Science Quality\n\n\nMonthly Composites, Science Quality"
   },
   {
     "objectID": "user_resources.html#download-algorithm-input-data",
@@ -207,7 +207,7 @@
     "href": "stats2.html#references",
     "title": "\nStatistical Analysis\n",
     "section": "References",
-    "text": "References\n\nMélin, F., V. Vantrepotte, A. Chuprin, M. Grant, T. Jackson, and S. Sathyendranath. 2017. Assessing the fitness-for-purpose of satellite multi-mission ocean color climate data records: A protocol applied to OC-CCI chlorophyll- a data. Remote Sensing of Environment 203:139–151. \n\n\n\n Viera, A. J., and J. M. Garrett. 2005. Understanding interobserver agreement: the kappa statistic. Family Medicine 37(5):360–363."
+    "text": "References\n\nMélin, F., V. Vantrepotte, A. Chuprin, M. Grant, T. Jackson, and S. Sathyendranath. 2017. Assessing the fitness-for-purpose of satellite multi-mission ocean color climate data records: A protocol applied to OC-CCI chlorophyll- a data. Remote Sensing of Environment 203:139–151.\n\n\n\nViera, A. J., and J. M. Garrett. 2005.  Understanding interobserver agreement: the kappa statistic.  Family Medicine 37(5):360–363."
   },
   {
     "objectID": "stats2.html#appendix",
