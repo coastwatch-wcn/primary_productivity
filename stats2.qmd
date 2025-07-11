@@ -146,7 +146,7 @@ Viera, A. J., and J. M. Garrett. 2005. Understanding interobserver agreement: th
 
 The following sections provide detailed explanations of how the statistical analyses between the legacy and interim products were calculated. If you are interested in exploring or replicating these analyses yoursel, check out our [Code Gallery](user_resources.qmd) for step-by-step tutorials. 
 
-### Unbiased Relative Difference (&psi;) {#psi_appendix}
+### Unbiased Relative Difference {#psi_appendix}
 
 The pixel-by-pixel **unbiased relative difference (&psi;<sup>netPP</sup>)** was computed for the globe for each month at 9km resolution across [two datasets.](#download-statistical-analysis-data-products)
 
