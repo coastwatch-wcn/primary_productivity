@@ -1,14 +1,16 @@
-/* Center the navbar items */
+/* Center the navbar items horizontally*/
 nav.quarto-navbar {
     display: flex;
     justify-content: center;
 }
 
+/* Default link color in navbar + smooth hover transition*/
 .navbar-nav .nav-link {
   color: #cccccc;
   transition: color 0.3s ease-in-out;
 }
 
+/* Navbar link color on hover*/
 .navbar-nav .nav-link:hover {
   color: white;
 }
@@ -19,24 +21,26 @@ nav.quarto-navbar .quarto-navbar-logo {
     margin-left: auto;
 }
 
+/* Control logo image sizing and spacing*/
 .navbar-logo {
   max-height: 45px;
   width: auto;
   padding-right: 4px;
 }
 
+/* Navbar background color + text color*/
 .navbar {
     background-color:  #0058A6;
     color: white;
 }
 
+/* Branding text (site title/logo text) styling*/
 .navbar-brand {
     color: white;
     font-weight: normal;
 }
 
-
-
+/* Search icon (magnifying glass) styling in dark navbar*/
 .navbar #quarto-search.type-overlay .aa-Autocomplete svg.aa-SubmitIcon {
     width: 26px;
     height: 26px;
@@ -44,6 +48,7 @@ nav.quarto-navbar .quarto-navbar-logo {
     opacity: 1;
 }
 
+/* Bootstrap navbar dark theme overrides*/
 .navbar-dark, .navbar[data-bs-theme=dark] {
     --bs-navbar-color: #545555;
     --bs-navbar-hover-color: #dee2e6;
@@ -55,12 +60,14 @@ nav.quarto-navbar .quarto-navbar-logo {
     --bs-navbar-toggler-icon-bg: url(data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23545555' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e);
 }
 
+/* Active page link style (horizontal tab navigation)*/
 .navbar-nav .nav-link.active,
 .navbar-nav .nav-link[aria-current="page"] {
   color: white;
   font-weight: bold;
 }
 
+/* Layout for nav-tabs (horizontal tab navigation)*/
 .nav-tabs {
   display: flex;
   flex-wrap: nowrap;
@@ -69,6 +76,7 @@ nav.quarto-navbar .quarto-navbar-logo {
   margin: 0;
 }
 
+/* Tab link styling: fixed width, centered text*/
 .nav-tabs .nav-link {
   box-sizing: border-box;
   min-width: 150px;
@@ -78,6 +86,7 @@ nav.quarto-navbar .quarto-navbar-logo {
   padding: 10px;
 }
 
+/* Container for tab content area*/
 .tab-content {
   width: 100%;
   max-width: none;
