@@ -63,7 +63,7 @@ The two interim product lines are routinely produced and are available online as
 
 
 ## Project Team and Funding
-<p>The project team included Dale Robinson, Cara Wilson, Sunny Hospital, Veronica Lance, Johnathon Sherman, Ryan Rykaczewski, Andrea Vander Woude, Menghua Wang, and Melanie Abecassis associated with NOAA CoastWatch; Kim Hyde from NOAA Southeast Fisheries Science Center; and Ryan Vandermeulen from the NOAA National Marine Fisheries Service.</p>
+<p>The project team included Dale Robinson, Cara Wilson, Sunny Hospital, Veronica Lance, Jonathan Sherman, Ryan Rykaczewski, Andrea Vander Woude, Menghua Wang, and Melanie Abecassis associated with NOAA CoastWatch; Kim Hyde from NOAA Southeast Fisheries Science Center; and Ryan Vandermeulen from the NOAA National Marine Fisheries Service.</p>
 
 <p>A special thanks to Jesse Espinoza and Madison Richardson, who made important contributions to the project including helping to generate the production Python code, produce the primary productivity products, and develop the web presence.</p>
 
