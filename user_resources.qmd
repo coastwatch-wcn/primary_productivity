@@ -23,7 +23,7 @@ Explore tutorials designed to help users analyze and compare legacy and interim 
 #### Unbiased Relative Difference Analysis of the Legacy and Interim Products
 ::: {.grid}
 ::::{.g-col-6}
-![](images/CCAL_MODIS_SNPP_psi.png){width=100%}
+![](images/ccal_psi_netpp.png){width=100%}
 ::::
 :::: {.g-col-6}
 Calculate the mean unbiased relative difference ($\psi$) between the legacy and interim products for a user-specified region.
@@ -35,7 +35,7 @@ Calculate the mean unbiased relative difference ($\psi$) between the legacy and 
 #### Absolute Relative Difference Analysis of the Legacy and Interim Products
 ::: {.grid}
 ::::{.g-col-6}
-![](images/CCAL_MODIS_SNPP_delta.png){width=100%}
+![](images/carb_delta_netpp.png){width=100%}
 ::::
 :::: {.g-col-6}
 Calculate the absolute relative difference ($\Delta$) between the legacy and interim products for a user-specified region.
@@ -47,7 +47,7 @@ Calculate the absolute relative difference ($\Delta$) between the legacy and int
 #### Contingency Tables: Assessing the Similarity Between Two Primary Productivity Products
 ::: {.grid}
 ::::{.g-col-6}
-![](images/CCAL_3x3_table.png){width=100%}
+![](images/CCAL_3x3_contingency.png){width=100%}
 ::::
 :::: {.g-col-6}
 Construct a contingency matrix to compare the trends between the legacy and interim products for a user-specified region.
