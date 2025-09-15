@@ -138,14 +138,14 @@ Generate trends for satellite-derived hourly means of legacy or interim primary 
     </ul>
   <li><a>MODIS Aqua input data for legacy netPP</a></li>
     <ul>
-      <li><a href="https://www.earthdata.nasa.gov/">MODIS Chlorophyll a</a></li>
-      <li><a href="https://www.earthdata.nasa.gov/">MODIS PAR</a></li>
+      <li><a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMH1chlamday_R2022SQ.graph">MODIS Chlorophyll a</a></li>
+      <li><a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdMH1par0mday_R2022SQ.graph">MODIS PAR</a></li>
       <li><a href="https://www.earthdata.nasa.gov/">MODIS SST</a></li>
     </ul>
   <li><a>VIIRS SNPP input data for interim netPP</a></li>
     <ul>
-      <li><a href="https://www.earthdata.nasa.gov/">VIIRS SNPP Chlorophyll a</a></li>
-      <li><a href="https://www.earthdata.nasa.gov/">VIIRS SNPP PAR</a></li>
+      <li><a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdVH2018chlamday.graph">VIIRS SNPP Chlorophyll a</a></li>
+      <li><a href="https://coastwatch.pfeg.noaa.gov/erddap/griddap/erdVH2018parmday.graph">VIIRS SNPP PAR</a></li>
       <li><a href="https://www.earthdata.nasa.gov/">VIIRS SNPP SST</a></li>
     </ul>
   <li><a>VIIRS NOAA-20 input data for interim netPP</a></li>
