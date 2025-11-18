@@ -25,7 +25,7 @@ $$
 
 Where:
 
--   The difference between VIIRS-based netPP ($\text{netPP}_{\text{VIIRS}}$) and MODIS-based netPP ($\text{netPP}_{\text{MODIS}}$) values for that pixel is divided by the mean of $\text{netPP}_{\text{VIIRS}}$ and $\text{netPP}_{\text{MODIS}}$.
+-   The difference between VIIRS-based netPP $\text{netPP}_{\text{VIIRS}}$ and MODIS-based netPP ($\text{netPP}_{\text{MODIS}}$) values for that pixel is divided by the mean of $\text{netPP}_{\text{VIIRS}}$ and $\text{netPP}_{\text{MODIS}}$.
 
 Normalizing by the mean of the two values avoids arbitrarily selecting one product as a reference.
 
