@@ -21,7 +21,9 @@ The unbiased relative difference $\psi^{\text{netPP}}$ is calculated for each pi
 
 $$
 \psi^{\text{netPP}} = \frac{\text{netPP}_{\text{VIIRS}} - \text{netPP}_{\text{MODIS}}}{\left( \text{netPP}_{\text{VIIRS}} + \text{netPP}_{\text{MODIS}} \right) \div 2}
-$$ Where:
+$$ 
+
+Where:
 
 -   The difference between VIIRS-based netPP ($\text{netPP}_{\text{VIIRS}}$) and MODIS-based netPP ($\text{netPP}_{\text{MODIS}}$) values for that pixel is divided by the mean of $\text{netPP}_{\text{VIIRS}}$ and $\text{netPP}_{\text{MODIS}}$.
 
