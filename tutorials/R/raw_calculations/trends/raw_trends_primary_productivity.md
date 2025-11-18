@@ -1,9 +1,6 @@
 ---
 date: "2025-11-17"
 output: html_document
-editor_options: 
-  markdown: 
-    wrap: 72
 ---
 
 # Calculating Trends and P-Values for Legacy and Interim NetPP Products
