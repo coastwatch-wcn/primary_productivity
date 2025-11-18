@@ -33,7 +33,7 @@ Normalizing by the mean of the two values avoids arbitrarily selecting one produ
 
 ## Datasets Overview
 
-We will be creating the pixel-by-pixel unbiased relative difference ($\psi^{\text{netPP}}$) for each monthly at a 9km resolution across the VIIRS-NOAA20 and MODIS-Aqua datasets. Here are the available datasets including VIIRS-SNPP:
+We will be creating the pixel-by-pixel unbiased relative difference ($\psi^{\text{netPP}}$) for each month at a 9km resolution across the VIIRS-NOAA20 and MODIS-Aqua datasets. Here are the available datasets including VIIRS-SNPP:
 
 1.  **Primary Productivity, MODIS Aqua, Science Quality, Global, 9km, 2013-2022, (Monthly Composite)**
 
