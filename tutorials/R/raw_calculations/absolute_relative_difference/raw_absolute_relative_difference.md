@@ -1,9 +1,6 @@
 ---
 output: html_document
 date: "2025-11-17"
-editor_options: 
-  markdown: 
-    wrap: 72
 ---
 
 # Absolute Relative Difference Analysis of the Interim and Legacy Primary Productivity Products
