@@ -9,7 +9,7 @@ date: "2025-04-29"
 
 ## Objectives
 
-Calculate the mean absolute relative difference $\Delta^{\text{netPP}}$ of the interim VIIRS netPP ($\text{netPP}_{\text{VIIRS}}$) and legacy MODIS netPP ($\text{netPP}_{\text{MODIS}}$) products within a user-specified region for each month from the timeseries of the user-specified sensor.
+Calculate the mean absolute relative difference $\Delta^{\text{netPP}}$ of the interim VIIRS netPP and legacy MODIS netPP products within a user-specified region for each month from the timeseries of the user-specified sensor.
 
 We are using this statistic to track the similarities in netPP values between interim VIIRS and legacy MODIS datasets to provide validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.
 
