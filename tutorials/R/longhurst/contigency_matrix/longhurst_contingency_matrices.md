@@ -1,8 +1,8 @@
 ---
-title: "Contingency Tables: Assessing the Similarity Between Two Primary Productivity (NetPP) Products"
 output: html_document
 date: "2025-09-12"
 ---
+# Contingency Tables: Assessing the Similarity Between Two Primary Productivity (NetPP) Products
 
 ## Objectives
 
