@@ -28,7 +28,8 @@ Explore tutorials designed to help users analyze and compare legacy and interim 
 :::: {.g-col-6}
 Calculate the mean unbiased relative difference ($\psi$) between the legacy and interim products for a user-specified region.
 
-[View in Github](https://example.com)
+[Python Tutorial](https://github.com/coastwatch-wcn/primary_productivity/blob/main/tutorials/Python/longhurst/unbiased_relative_difference/longhurst_unbiased_relative_difference.ipynb)
+[R Tutorial](https://github.com/coastwatch-wcn/primary_productivity/blob/main/tutorials/R/longhurst/unbiased_relative_difference/longhurst_unbiased_relative_difference.Rmd)
 ::::
 :::
 
@@ -40,7 +41,8 @@ Calculate the mean unbiased relative difference ($\psi$) between the legacy and 
 :::: {.g-col-6}
 Calculate the absolute relative difference ($\Delta$) between the legacy and interim products for a user-specified region.
 
-[View in Github](https://example.com)
+[Python Tutorial](https://github.com/coastwatch-wcn/primary_productivity/blob/main/tutorials/Python/longhurst/absolute_relative_difference/longhurst_absolute_relative_difference.ipynb)
+[R Tutorial](https://github.com/coastwatch-wcn/primary_productivity/blob/main/tutorials/R/longhurst/absolute_relative_difference/longhurst_absolute_relative_difference.Rmd)
 ::::
 :::
 
@@ -52,7 +54,8 @@ Calculate the absolute relative difference ($\Delta$) between the legacy and int
 :::: {.g-col-6}
 Construct a contingency matrix to compare the trends between the legacy and interim products for a user-specified region.
 
-[View in Github](https://example.com)
+[Python Tutorial](https://github.com/coastwatch-wcn/primary_productivity/blob/main/tutorials/Python/longhurst/contingency_matrix/longhurst_contingency_matrices.ipynb)
+[R Tutorial](https://github.com/coastwatch-wcn/primary_productivity/blob/main/tutorials/R/longhurst/contigency_matrix/longhurst_contingency_matrices.Rmd)
 ::::
 :::
 
@@ -64,7 +67,8 @@ Construct a contingency matrix to compare the trends between the legacy and inte
 
 Calculate the mean unbiased relative difference ($\psi$) of the interim VIIRS netPP and legacy MODIS netPP products for each month from the time series shared between the two sensors. 
 
-[View in Github](https://example.com)
+[Python Tutorial](https://github.com/coastwatch-wcn/primary_productivity/blob/main/tutorials/Python/raw_calculations/unbiased_relative_difference/raw_unbiased_relative_difference.ipynb)
+[R Tutorial](https://github.com/coastwatch-wcn/primary_productivity/blob/main/tutorials/R/raw_calculations/unbiased_relative_difference/raw_unbiased_relative_difference.Rmd)
 ::::
 :::
 
@@ -74,7 +78,8 @@ Calculate the mean unbiased relative difference ($\psi$) of the interim VIIRS ne
 
 Calculate the mean absolute relative difference ($\Delta$) of the interim VIIRS netPP product and legacy MODIS netPP product for each month from a time series shared between the two sensors. 
 
-[View in Github](https://example.com)
+[Python Tutorial](https://github.com/coastwatch-wcn/primary_productivity/blob/main/tutorials/Python/raw_calculations/absolute_relative_difference/raw_absolute_relative_difference.ipynb)
+[R Tutorial](https://github.com/coastwatch-wcn/primary_productivity/blob/main/tutorials/R/raw_calculations/absolute_relative_difference/raw_absolute_relative_difference.Rmd)
 ::::
 :::
 
@@ -84,7 +89,8 @@ Calculate the mean absolute relative difference ($\Delta$) of the interim VIIRS 
 
 Generate trends for satellite-derived hourly means of legacy or interim primary productivity products.
 
-[View in Github](https://example.com)
+[Python Tutorial](https://github.com/coastwatch-wcn/primary_productivity/blob/main/tutorials/Python/raw_calculations/trends/raw_trends_primary_productivity.ipynb)
+[R Tutorial](https://github.com/coastwatch-wcn/primary_productivity/blob/main/tutorials/R/raw_calculations/trends/raw_trends_primary_productivity.Rmd)
 ::::
 :::
 
