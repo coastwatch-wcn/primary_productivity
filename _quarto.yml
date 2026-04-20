@@ -2,9 +2,9 @@ project:
   type: website
   output-dir: docs
   render:
-    - "*.qmd"
-    - "*.ipynb"
-    - "!*.Rmd"
+    - "**/*.qmd"
+    - "**/*.ipynb"
+    - "!**/*.Rmd"
 
 website:
   title: "CoastWatch Primary Productivity Project"
