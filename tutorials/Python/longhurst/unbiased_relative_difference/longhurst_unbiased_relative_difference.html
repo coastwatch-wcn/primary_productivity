@@ -1,0 +1,1765 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Primary Productivity Unbiased Relative Difference Analysis – CoastWatch Primary Productivity Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-08e1269e8557b430e2197ccc38ae6770.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
+
+
+<link rel="stylesheet" href="../../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../images/NOAA_logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">CoastWatch Primary Productivity Project</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../algorithm.html"> 
+<span class="menu-text">Algorithm and Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../stats2.html"> 
+<span class="menu-text">Statistical Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../user_resources.html"> 
+<span class="menu-text">User Resources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Primary Productivity Unbiased Relative Difference Analysis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="unbiased-relative-difference-analysis-of-the-interim-and-legacy-products" class="level2">
+<h2 class="anchored" data-anchor-id="unbiased-relative-difference-analysis-of-the-interim-and-legacy-products">Unbiased relative difference analysis of the interim and legacy products</h2>
+<blockquote class="blockquote">
+<p>History | Updated Nov 2025</p>
+</blockquote>
+</section>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>Calculate the mean unbiased relative difference (ψ<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products within a user-specified region for each month from the timeseries of the user-specified sensor.</p>
+<p>We are using this statistic to track the similarities in netPP values between interim VIIRS and legacy MODIS datasets to provide validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.</p>
+<p>For <strong>VIIRS-SNPP</strong>, the result will be a <strong>120-month (10-year)</strong> mean monthly timeseries of ψ<sup>netPP</sup> within your area of interest.</p>
+<p>For <strong>VIIRS-NOAA20</strong>, the result will be a <strong>60-month (5-year)</strong> mean monthly timeseries of ψ<sup>netPP</sup> within your area of interest.</p>
+<ul>
+<li><p>ψ<sub>netPP</sub> was calculated as the difference between VIIRS and MODIS netPP values divided by the mean of VIIRS and MODIS.</p></li>
+<li><p>Normalizing by the mean of the two values avoids arbitrarily selecting one product as reference.</p></li>
+</ul>
+<section id="steps" class="level3">
+<h3 class="anchored" data-anchor-id="steps">Steps:</h3>
+<blockquote class="blockquote">
+<ul>
+<li>Download an area of monthly ψ<sup>netPP</sup> values from the ERDDAP server for each month from the timeseries.</li>
+<li>Mask the timeseries so that only data within a shapefile is retained.<br>
+</li>
+<li>Calculate the mean values of ψ<sup>netPP</sup> for each month.</li>
+<li>Visualize the timeseries and save the data.</li>
+<li>Visualize the spatial variability in the timeseries monthly ψ<sup>lat/lon</sup> mean.</li>
+</ul>
+</blockquote>
+</section>
+</section>
+<section id="satellite-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="satellite-datasets">Satellite Datasets:</h2>
+<section id="unbiased-relative-difference" class="level4">
+<h4 class="anchored" data-anchor-id="unbiased-relative-difference">Unbiased Relative Difference</h4>
+<p>The unbiased relative difference (ψ<sup>netPP</sup>) is calculated, for each pixel as follows:</p>
+<p>$ ^{netPP} = <br>
+$</p>
+<p>Where: * The difference between VIIRS-based netPP (netPP<sub>VIIRS</sub>) and MODIS-based (netPP<sub>MODIS</sub>) netPP values for that pixel is divided by the mean of netPP<sub>VIIRS</sub> and netPP<sub>MODIS</sub>.</p>
+</section>
+<section id="datasets-overview" class="level4">
+<h4 class="anchored" data-anchor-id="datasets-overview">Datasets Overview</h4>
+<p>We created the pixel-by-pixel unbiased relative difference (ψ<sup>netPP</sup>) for the globe for each monthy at a 9km resolution across two datasets:</p>
+<ol type="1">
+<li><strong>Unbiased Relative Difference of Net Primary Productivity, VIIRS SNPP vs MODIS Aqua, 9Km, Monthly, 2013-2022, Global</strong></li>
+</ol>
+<ul>
+<li>Distributed via the West Coast Node ERDDAP dataset at the following link: &gt; https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_snpp_modis.graph</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Unbiased Relative Difference of Net Primary Productivity, VIIRS NOAA20 vs MODIS Aqua, 9Km, Monthly, 2018-2022, Global</strong></li>
+</ol>
+<ul>
+<li>Distributed via the West Coast Node ERDDAP dataset at the following link: &gt; https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/netpp_psi_noaa20_modis.graph</li>
+</ul>
+</section>
+<section id="tutorial-for-this-notebook" class="level4">
+<h4 class="anchored" data-anchor-id="tutorial-for-this-notebook">Tutorial for this notebook</h4>
+<p>The VIIRS-SNPP - MODIS-Aqua dataset will be used in this notebook to generate a timeseries of monthly mean values of ψ<sup>netPP</sup>. We will access the data using the xr_open_ds() function below. The function requires:<br>
+* The url of the ERDDAP server being use, in this case: https://coastwatch.pfeg.noaa.gov/wcn/erddap/</p>
+<ul>
+<li>The ID of the dataset, in this case is “netpp_psi_snpp_modis”.</li>
+</ul>
+<p><strong>To use the VIIRS-NOAA20 sensor instead,</strong> set ‘sensor = “noaa20”’ in the code below.</p>
+<div id="f94d98a2" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># define sensor (either "snpp" or "noaa20")</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>sensor <span class="op">=</span> <span class="st">"snpp"</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="co"># check that sensor is either snpp or noaa20</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> sensor <span class="kw">not</span> <span class="kw">in</span> {<span class="st">"snpp"</span>, <span class="st">"noaa20"</span>}:</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"The variable sensor must have the value 'snpp' or 'noaa20'."</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="co"># define time series based on sensor</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> sensor <span class="op">==</span> <span class="st">"noaa20"</span>:</span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    time_series <span class="op">=</span> <span class="st">"2018-2022"</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="cf">elif</span> sensor <span class="op">==</span> <span class="st">"snpp"</span>:</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    time_series <span class="op">=</span> <span class="st">"2013-2022"</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>    times_series <span class="op">=</span> <span class="st">"Unknown time series"</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a><span class="co"># set the url of the ERDDAP server</span></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>erddap_url <span class="op">=</span> <span class="st">"https://coastwatch.pfeg.noaa.gov/wcn/erddap/"</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a><span class="co"># set the dataset ID</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>erddap_id <span class="op">=</span> <span class="ss">f"netpp_psi_</span><span class="sc">{</span>sensor<span class="sc">}</span><span class="ss">_modis"</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Dataset ID: </span><span class="sc">{</span>erddap_id<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Dataset ID: netpp_psi_snpp_modis</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="shapefiles" class="level2">
+<h2 class="anchored" data-anchor-id="shapefiles">Shapefiles</h2>
+<section id="longhurst-marine-provinces" class="level4">
+<h4 class="anchored" data-anchor-id="longhurst-marine-provinces">Longhurst Marine Provinces</h4>
+<p>The dataset represents the division of the world oceans into provinces as defined by Longhurst (1995; 1998; 2006). This division has been based on the prevailing role of physical forcing as a regulator of phytoplankton distribution. The Longhurst Marine Provinces dataset is available online (https://www.marineregions.org/downloads.php) and within the shapes folder associated with this repository.</p>
+<p><img src="longhurst.png" class="img-fluid"></p>
+<p><strong>For our example we will use the shapefile for the “California Upwelling Coastal Province” (ProvCode: CCAL) within the Longhurst Marine Provinces classification</strong>.</p>
+</section>
+</section>
+<section id="resource-requirements" class="level2">
+<h2 class="anchored" data-anchor-id="resource-requirements">Resource requirements</h2>
+<ul>
+<li><p><strong>Jupyter Notebook</strong></p></li>
+<li><p><strong>Python 3</strong> with the modules included within the <em>Import packages</em> section below</p></li>
+<li><p><strong>Shapefile</strong> of your area of interest</p>
+<ul>
+<li>If you don’t have shapefile, we will include some workarounds in the notebook.</li>
+</ul></li>
+<li><p><strong>Internet connection</strong></p></li>
+</ul>
+</section>
+<section id="import-packages" class="level2">
+<h2 class="anchored" data-anchor-id="import-packages">Import packages</h2>
+<div id="45ac5d46" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-03-15T05:05:41.334822Z&quot;,&quot;start_time&quot;:&quot;2024-03-15T05:05:39.765760Z&quot;}}" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cartopy.crs <span class="im">as</span> ccrs</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cartopy.feature <span class="im">as</span> cfeature</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> regionmask</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> warnings</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>warnings.filterwarnings(<span class="st">"ignore"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="create-a-few-useful-functions" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-few-useful-functions">Create a few useful functions</h2>
+<section id="function-to-make-an-xarray-dataset-connection-to-an-erddap-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="function-to-make-an-xarray-dataset-connection-to-an-erddap-dataset">Function to make an Xarray dataset connection to an ERDDAP dataset</h3>
+<div id="ad78da3d" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> xr_open_ds(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    e_id, e_source<span class="op">=</span><span class="st">"https://coastwatch.pfeg.noaa.gov/wcn/erddap"</span>, dap<span class="op">=</span><span class="st">"griddap"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>):</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Open a remote ERDDAP dataset as an Xarray dataset.</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Constructs the ERDDAP dataset URL using the provided dataset ID ('e_id'),</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">    server URL ('e_source'), and data access protocol ('dap'). Then it uses Xarray</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">    to open the dataset from the remote source.</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">        e_id (str): ERDDAP dataset ID.</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">        e_source (str, optional): URL to ERDDAP server. Defaults to 'https://coastwatch.pfeg.noaa.gov/wcn/erddap'.</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">            You can change it to any ERDDAP server.</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">        dap (str, optional): The data access protocol type. Defaults to 'griddap' which is used for</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co">        accessing gridded datasets.</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co">        array: Xarray dataset object</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># remove any trailing /</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    e_source <span class="op">=</span> e_source.rstrip(<span class="st">"/"</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    erddap_url <span class="op">=</span> <span class="st">"/"</span>.join([e_source, dap, e_id])</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> xr.open_dataset(erddap_url)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="function-to-spatially-subset-an-xarray-dataset-using-latitude-and-longitude" class="level3">
+<h3 class="anchored" data-anchor-id="function-to-spatially-subset-an-xarray-dataset-using-latitude-and-longitude">Function to spatially subset an Xarray dataset using latitude and longitude</h3>
+<div id="bb0eb821" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> subset_ds(full_ds, var_name, bnds_dic):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""Make a spatial subset a satellite dataset.</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co">        full_ds (array): 2D or 3D array with lat and lon coordinate variables</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">        var_name (str): Name of varaible to subset.</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">        bnds_dic (dic): Dictionary holding lat and lon max and min values</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">        array: Xarray dataset object</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="co"># correct for reversed latitude order on a dataset</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> full_ds.latitude[<span class="dv">0</span>] <span class="op">&gt;</span> full_ds.latitude[<span class="op">-</span><span class="dv">1</span>]:</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>        lt_first <span class="op">=</span> bnds_dic[<span class="st">"lat_max"</span>]</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>        lt_last <span class="op">=</span> bnds_dic[<span class="st">"lat_min"</span>]</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        lt_first <span class="op">=</span> bnds_dic[<span class="st">"lat_min"</span>]</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        lt_last <span class="op">=</span> bnds_dic[<span class="st">"lat_max"</span>]</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>    <span class="co"># subset the dataset</span></span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> full_ds[var_name].sel(</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        latitude<span class="op">=</span><span class="bu">slice</span>(lt_first, lt_last),</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        longitude<span class="op">=</span><span class="bu">slice</span>(bnds_dic[<span class="st">"lon_min"</span>], bnds_dic[<span class="st">"lon_max"</span>]),</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>    )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="load-the-longhurst-provinces-shapefiles-into-a-geopandas-dataframe" class="level2">
+<h2 class="anchored" data-anchor-id="load-the-longhurst-provinces-shapefiles-into-a-geopandas-dataframe">Load the Longhurst Provinces shapefiles into a geopandas dataframe</h2>
+<p>In this example, we’ll use the shapefile for the <strong>California Upwelling Coastal Province</strong> (ProvCode: CCAL) from the Longhurst Marine Provinces classification.</p>
+<ul>
+<li><p>This step also isolates the California Upwelling Coastal Province.</p></li>
+<li><p>To inspect the shapefile’s position within the dataframe, uncomment the line: ‘print(shapefiles[40:45])’</p></li>
+</ul>
+<div id="b8f4f525" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;ExecuteTime&quot;,&quot;value&quot;:{&quot;end_time&quot;:&quot;2024-03-15T05:06:24.591369Z&quot;,&quot;start_time&quot;:&quot;2024-03-15T05:06:24.359466Z&quot;}}" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create path to shapefile dataset</span></span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>shape_path <span class="op">=</span> os.path.join(</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"/Users/madisonrichardson/netpp/resources/Longhurst/Longhurst_world_v4_2010.shp"</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co"># create a dataframe</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>shapefiles <span class="op">=</span> geopandas.read_file(shape_path)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co"># uncomment net line to see the California Upwelling Coastal Province entry</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a><span class="co"># print(shapefiles[40:45])</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>ProvCode <span class="op">=</span> <span class="st">"CCAL"</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>coastal_CA <span class="op">=</span> shapefiles.loc[shapefiles[<span class="st">"ProvCode"</span>] <span class="op">==</span> ProvCode]</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>coastal_CA</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">ProvCode</th>
+<th data-quarto-table-cell-role="th">ProvDescr</th>
+<th data-quarto-table-cell-role="th">geometry</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">43</td>
+<td>CCAL</td>
+<td>Coastal - California Upwelling Coastal Province</td>
+<td>MULTIPOLYGON (((-110.5 24.5, -110.5 24.22013, ...</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+</section>
+<section id="create-the-regional-mask-for-the-california-upwelling-coastal-province" class="level2">
+<h2 class="anchored" data-anchor-id="create-the-regional-mask-for-the-california-upwelling-coastal-province">Create the regional mask for the California Upwelling Coastal Province</h2>
+<p>Display the region after creating it.</p>
+<div id="b213d994" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>region <span class="op">=</span> regionmask.from_geopandas(coastal_CA)</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>region.plot()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="longhurst_unbiased_relative_difference_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="find-the-coordinates-of-the-bounding-box" class="level2">
+<h2 class="anchored" data-anchor-id="find-the-coordinates-of-the-bounding-box">Find the coordinates of the bounding box</h2>
+<ul>
+<li><p>The bounding box is the smallest rectangle that will completely enclose the province.</p></li>
+<li><p>We will use the bounding box coordinates to subset the satellite data.</p></li>
+</ul>
+<div id="07ca5fe4" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>gs_bnds <span class="op">=</span> coastal_CA.bounds</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>gs_bnds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="7">
+<div>
+
+
+<table class="dataframe caption-top table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">minx</th>
+<th data-quarto-table-cell-role="th">miny</th>
+<th data-quarto-table-cell-role="th">maxx</th>
+<th data-quarto-table-cell-role="th">maxy</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">43</td>
+<td>-134.5</td>
+<td>16.5</td>
+<td>-110.5</td>
+<td>51.383431</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<section id="to-make-it-easier-to-use-the-subset_ds-function-without-a-shapefile-put-the-bounding-box-coordinates-in-a-python-dictionary." class="level3">
+<h3 class="anchored" data-anchor-id="to-make-it-easier-to-use-the-subset_ds-function-without-a-shapefile-put-the-bounding-box-coordinates-in-a-python-dictionary.">To make it easier to use the subset_ds() function without a shapefile, put the bounding box coordinates in a Python dictionary.</h3>
+<div id="2fc83f67" class="cell" data-tags="[&quot;Shapefile method&quot;]" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>geo_bnds <span class="op">=</span> {}</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>geo_bnds[<span class="st">"lon_min"</span>] <span class="op">=</span> gs_bnds.minx.item()</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>geo_bnds[<span class="st">"lon_max"</span>] <span class="op">=</span> gs_bnds.maxx.item()</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>geo_bnds[<span class="st">"lat_min"</span>] <span class="op">=</span> gs_bnds.miny.item()</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>geo_bnds[<span class="st">"lat_max"</span>] <span class="op">=</span> gs_bnds.maxy.item()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="open-the-modis-netpp-and-viirs-netpp-datasets-into-a-xarray-dataset-object" class="level2">
+<h2 class="anchored" data-anchor-id="open-the-modis-netpp-and-viirs-netpp-datasets-into-a-xarray-dataset-object">Open the MODIS netPP and VIIRS netPP datasets into a Xarray dataset object</h2>
+<p>Pass the dataset ID and the ERDDAP server location to the xr_open_ds() function.</p>
+<ul>
+<li><p>For details on xr_open_ds(), refer to the function’s document string.</p></li>
+<li><p><strong>Reminder</strong>: The erddap_id and erddap_url variables were set above.</p></li>
+</ul>
+<div id="17432cd1" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>ds <span class="op">=</span> xr_open_ds(erddap_id, e_source<span class="op">=</span>erddap_url)</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="9">
+<div><svg style="position: absolute; width: 0; height: 0; overflow: hidden">
+<defs>
+<symbol id="icon-database" viewbox="0 0 32 32">
+<path d="M16 0c-8.837 0-16 2.239-16 5v4c0 2.761 7.163 5 16 5s16-2.239 16-5v-4c0-2.761-7.163-5-16-5z"></path>
+<path d="M16 17c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+<path d="M16 26c-8.837 0-16-2.239-16-5v6c0 2.761 7.163 5 16 5s16-2.239 16-5v-6c0 2.761-7.163 5-16 5z"></path>
+</symbol>
+<symbol id="icon-file-text2" viewbox="0 0 32 32">
+<path d="M28.681 7.159c-0.694-0.947-1.662-2.053-2.724-3.116s-2.169-2.030-3.116-2.724c-1.612-1.182-2.393-1.319-2.841-1.319h-15.5c-1.378 0-2.5 1.121-2.5 2.5v27c0 1.378 1.122 2.5 2.5 2.5h23c1.378 0 2.5-1.122 2.5-2.5v-19.5c0-0.448-0.137-1.23-1.319-2.841zM24.543 5.457c0.959 0.959 1.712 1.825 2.268 2.543h-4.811v-4.811c0.718 0.556 1.584 1.309 2.543 2.268zM28 29.5c0 0.271-0.229 0.5-0.5 0.5h-23c-0.271 0-0.5-0.229-0.5-0.5v-27c0-0.271 0.229-0.5 0.5-0.5 0 0 15.499-0 15.5 0v7c0 0.552 0.448 1 1 1h7v19.5z"></path>
+<path d="M23 26h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 22h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+<path d="M23 18h-14c-0.552 0-1-0.448-1-1s0.448-1 1-1h14c0.552 0 1 0.448 1 1s-0.448 1-1 1z"></path>
+</symbol>
+</defs>
+</svg>
+<style>/* CSS stylesheet for displaying xarray objects in jupyterlab.
+ *
+ */
+
+:root {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base rgba(0, 0, 0, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(0, 0, 0, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, white)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, white) h s calc(l - 15))
+  );
+}
+
+html[theme="dark"],
+html[data-theme="dark"],
+body[data-theme="dark"],
+body.vscode-dark {
+  --xr-font-color0: var(
+    --jp-content-font-color0,
+    var(--pst-color-text-base, rgba(255, 255, 255, 1))
+  );
+  --xr-font-color2: var(
+    --jp-content-font-color2,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.54))
+  );
+  --xr-font-color3: var(
+    --jp-content-font-color3,
+    var(--pst-color-text-base, rgba(255, 255, 255, 0.38))
+  );
+  --xr-border-color: var(
+    --jp-border-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 10))
+  );
+  --xr-disabled-color: var(
+    --jp-layout-color3,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 40))
+  );
+  --xr-background-color: var(
+    --jp-layout-color0,
+    var(--pst-color-on-background, #111111)
+  );
+  --xr-background-color-row-even: var(
+    --jp-layout-color1,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 5))
+  );
+  --xr-background-color-row-odd: var(
+    --jp-layout-color2,
+    hsl(from var(--pst-color-on-background, #111111) h s calc(l + 15))
+  );
+}
+
+.xr-wrap {
+  display: block !important;
+  min-width: 300px;
+  max-width: 700px;
+}
+
+.xr-text-repr-fallback {
+  /* fallback to plain text repr when CSS is not injected (untrusted notebook) */
+  display: none;
+}
+
+.xr-header {
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin-bottom: 4px;
+  border-bottom: solid 1px var(--xr-border-color);
+}
+
+.xr-header > div,
+.xr-header > ul {
+  display: inline;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.xr-obj-type,
+.xr-array-name {
+  margin-left: 2px;
+  margin-right: 10px;
+}
+
+.xr-obj-type {
+  color: var(--xr-font-color2);
+}
+
+.xr-sections {
+  padding-left: 0 !important;
+  display: grid;
+  grid-template-columns: 150px auto auto 1fr 0 20px 0 20px;
+}
+
+.xr-section-item {
+  display: contents;
+}
+
+.xr-section-item input {
+  display: inline-block;
+  opacity: 0;
+  height: 0;
+}
+
+.xr-section-item input + label {
+  color: var(--xr-disabled-color);
+  border: 2px solid transparent !important;
+}
+
+.xr-section-item input:enabled + label {
+  cursor: pointer;
+  color: var(--xr-font-color2);
+}
+
+.xr-section-item input:focus + label {
+  border: 2px solid var(--xr-font-color0) !important;
+}
+
+.xr-section-item input:enabled + label:hover {
+  color: var(--xr-font-color0);
+}
+
+.xr-section-summary {
+  grid-column: 1;
+  color: var(--xr-font-color2);
+  font-weight: 500;
+}
+
+.xr-section-summary > span {
+  display: inline-block;
+  padding-left: 0.5em;
+}
+
+.xr-section-summary-in:disabled + label {
+  color: var(--xr-font-color2);
+}
+
+.xr-section-summary-in + label:before {
+  display: inline-block;
+  content: "►";
+  font-size: 11px;
+  width: 15px;
+  text-align: center;
+}
+
+.xr-section-summary-in:disabled + label:before {
+  color: var(--xr-disabled-color);
+}
+
+.xr-section-summary-in:checked + label:before {
+  content: "▼";
+}
+
+.xr-section-summary-in:checked + label > span {
+  display: none;
+}
+
+.xr-section-summary,
+.xr-section-inline-details {
+  padding-top: 4px;
+  padding-bottom: 4px;
+}
+
+.xr-section-inline-details {
+  grid-column: 2 / -1;
+}
+
+.xr-section-details {
+  display: none;
+  grid-column: 1 / -1;
+  margin-bottom: 5px;
+}
+
+.xr-section-summary-in:checked ~ .xr-section-details {
+  display: contents;
+}
+
+.xr-array-wrap {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: 20px auto;
+}
+
+.xr-array-wrap > label {
+  grid-column: 1;
+  vertical-align: top;
+}
+
+.xr-preview {
+  color: var(--xr-font-color3);
+}
+
+.xr-array-preview,
+.xr-array-data {
+  padding: 0 5px !important;
+  grid-column: 2;
+}
+
+.xr-array-data,
+.xr-array-in:checked ~ .xr-array-preview {
+  display: none;
+}
+
+.xr-array-in:checked ~ .xr-array-data,
+.xr-array-preview {
+  display: inline-block;
+}
+
+.xr-dim-list {
+  display: inline-block !important;
+  list-style: none;
+  padding: 0 !important;
+  margin: 0;
+}
+
+.xr-dim-list li {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+}
+
+.xr-dim-list:before {
+  content: "(";
+}
+
+.xr-dim-list:after {
+  content: ")";
+}
+
+.xr-dim-list li:not(:last-child):after {
+  content: ",";
+  padding-right: 5px;
+}
+
+.xr-has-index {
+  font-weight: bold;
+}
+
+.xr-var-list,
+.xr-var-item {
+  display: contents;
+}
+
+.xr-var-item > div,
+.xr-var-item label,
+.xr-var-item > .xr-var-name span {
+  background-color: var(--xr-background-color-row-even);
+  border-color: var(--xr-background-color-row-odd);
+  margin-bottom: 0;
+  padding-top: 2px;
+}
+
+.xr-var-item > .xr-var-name:hover span {
+  padding-right: 5px;
+}
+
+.xr-var-list > li:nth-child(odd) > div,
+.xr-var-list > li:nth-child(odd) > label,
+.xr-var-list > li:nth-child(odd) > .xr-var-name span {
+  background-color: var(--xr-background-color-row-odd);
+  border-color: var(--xr-background-color-row-even);
+}
+
+.xr-var-name {
+  grid-column: 1;
+}
+
+.xr-var-dims {
+  grid-column: 2;
+}
+
+.xr-var-dtype {
+  grid-column: 3;
+  text-align: right;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-preview {
+  grid-column: 4;
+}
+
+.xr-index-preview {
+  grid-column: 2 / 5;
+  color: var(--xr-font-color2);
+}
+
+.xr-var-name,
+.xr-var-dims,
+.xr-var-dtype,
+.xr-preview,
+.xr-attrs dt {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 10px;
+}
+
+.xr-var-name:hover,
+.xr-var-dims:hover,
+.xr-var-dtype:hover,
+.xr-attrs dt:hover {
+  overflow: visible;
+  width: auto;
+  z-index: 1;
+}
+
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  display: none;
+  border-top: 2px dotted var(--xr-background-color);
+  padding-bottom: 20px !important;
+  padding-top: 10px !important;
+}
+
+.xr-var-attrs-in + label,
+.xr-var-data-in + label,
+.xr-index-data-in + label {
+  padding: 0 1px;
+}
+
+.xr-var-attrs-in:checked ~ .xr-var-attrs,
+.xr-var-data-in:checked ~ .xr-var-data,
+.xr-index-data-in:checked ~ .xr-index-data {
+  display: block;
+}
+
+.xr-var-data > table {
+  float: right;
+}
+
+.xr-var-data > pre,
+.xr-index-data > pre,
+.xr-var-data > table > tbody > tr {
+  background-color: transparent !important;
+}
+
+.xr-var-name span,
+.xr-var-data,
+.xr-index-name div,
+.xr-index-data,
+.xr-attrs {
+  padding-left: 25px !important;
+}
+
+.xr-attrs,
+.xr-var-attrs,
+.xr-var-data,
+.xr-index-data {
+  grid-column: 1 / -1;
+}
+
+dl.xr-attrs {
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 125px auto;
+}
+
+.xr-attrs dt,
+.xr-attrs dd {
+  padding: 0;
+  margin: 0;
+  float: left;
+  padding-right: 10px;
+  width: auto;
+}
+
+.xr-attrs dt {
+  font-weight: normal;
+  grid-column: 1;
+}
+
+.xr-attrs dt:hover span {
+  display: inline-block;
+  background: var(--xr-background-color);
+  padding-right: 10px;
+}
+
+.xr-attrs dd {
+  grid-column: 2;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.xr-icon-database,
+.xr-icon-file-text2,
+.xr-no-icon {
+  display: inline-block;
+  vertical-align: middle;
+  width: 1em;
+  height: 1.5em !important;
+  stroke-width: 0;
+  stroke: currentColor;
+  fill: currentColor;
+}
+
+.xr-var-attrs-in:checked + label > .xr-icon-file-text2,
+.xr-var-data-in:checked + label > .xr-icon-database,
+.xr-index-data-in:checked + label > .xr-icon-database {
+  color: var(--xr-font-color0);
+  filter: drop-shadow(1px 1px 5px var(--xr-font-color2));
+  stroke-width: 0.8px;
+}
+</style><pre class="xr-text-repr-fallback">&lt;xarray.Dataset&gt; Size: 4GB
+Dimensions:    (time: 120, latitude: 2160, longitude: 4320)
+Coordinates:
+  * time       (time) datetime64[ns] 960B 2013-01-16T08:00:00 ... 2022-12-16T...
+  * latitude   (latitude) float64 17kB 89.96 89.88 89.79 ... -89.88 -89.96
+  * longitude  (longitude) float64 35kB -180.0 -179.9 -179.8 ... 179.9 180.0
+Data variables:
+    psi        (time, latitude, longitude) float32 4GB ...
+Attributes: (12/45)
+    acknowledgement:           This project was supported by the NOAA Office ...
+    cdm_data_type:             Grid
+    contributor:               Dale Robinson, Isaac Schroeder
+    contributor_role:          development and project management, production...
+    Conventions:               COARDS, CF-1.6, ACDD-1.3
+    creator_name:              NOAA CoastWatch West Coast Node
+    ...                        ...
+    summary:                   The unbiased relative difference (Psi) between...
+    time_coverage_end:         2022-12-16T08:00:00Z
+    time_coverage_resolution:  P1M
+    time_coverage_start:       2013-01-16T08:00:00Z
+    title:                     Unbiased Relative Difference of Net Primary Pr...
+    Westernmost_Easting:       -179.9583</pre><div class="xr-wrap" style="display:none"><div class="xr-header"><div class="xr-obj-type">xarray.Dataset</div></div><ul class="xr-sections"><li class="xr-section-item"><input id="section-0223cbdc-9083-4f18-bb2f-53795dfd5ab6" class="xr-section-summary-in" type="checkbox" disabled=""><label for="section-0223cbdc-9083-4f18-bb2f-53795dfd5ab6" class="xr-section-summary" title="Expand/collapse section">Dimensions:</label><div class="xr-section-inline-details"><ul class="xr-dim-list"><li><span class="xr-has-index">time</span>: 120</li><li><span class="xr-has-index">latitude</span>: 2160</li><li><span class="xr-has-index">longitude</span>: 4320</li></ul></div><div class="xr-section-details"></div></li><li class="xr-section-item"><input id="section-48a9d68a-7f7a-4f1c-85b3-723b9d68729b" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-48a9d68a-7f7a-4f1c-85b3-723b9d68729b" class="xr-section-summary">Coordinates: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">time</span></div><div class="xr-var-dims">(time)</div><div class="xr-var-dtype">datetime64[ns]</div><div class="xr-var-preview xr-preview">2013-01-16T08:00:00 ... 2022-12-...</div><input id="attrs-5e6bfd1c-a760-453f-9743-f138ec25ce53" class="xr-var-attrs-in" type="checkbox"><label for="attrs-5e6bfd1c-a760-453f-9743-f138ec25ce53" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-349f2193-4a90-4735-80d3-23d5b95cce09" class="xr-var-data-in" type="checkbox"><label for="data-349f2193-4a90-4735-80d3-23d5b95cce09" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>_CoordinateAxisType :</span></dt><dd>Time</dd><dt><span>actual_range :</span></dt><dd>[1.3583232e+09 1.6711776e+09]</dd><dt><span>axis :</span></dt><dd>T</dd><dt><span>ioos_category :</span></dt><dd>Time</dd><dt><span>long_name :</span></dt><dd>Centered Time</dd><dt><span>standard_name :</span></dt><dd>time</dd><dt><span>time_origin :</span></dt><dd>01-JAN-1970 00:00:00</dd></dl></div><div class="xr-var-data"><pre>array(['2013-01-16T08:00:00.000000000', '2013-02-16T08:00:00.000000000',
+       '2013-03-16T07:00:00.000000000', '2013-04-16T07:00:00.000000000',
+       '2013-05-16T07:00:00.000000000', '2013-06-16T07:00:00.000000000',
+       '2013-07-16T07:00:00.000000000', '2013-08-16T07:00:00.000000000',
+       '2013-09-16T07:00:00.000000000', '2013-10-16T07:00:00.000000000',
+       '2013-11-16T08:00:00.000000000', '2013-12-16T08:00:00.000000000',
+       '2014-01-16T08:00:00.000000000', '2014-02-16T08:00:00.000000000',
+       '2014-03-16T07:00:00.000000000', '2014-04-16T07:00:00.000000000',
+       '2014-05-16T07:00:00.000000000', '2014-06-16T07:00:00.000000000',
+       '2014-07-16T07:00:00.000000000', '2014-08-16T07:00:00.000000000',
+       '2014-09-16T07:00:00.000000000', '2014-10-16T07:00:00.000000000',
+       '2014-11-16T08:00:00.000000000', '2014-12-16T08:00:00.000000000',
+       '2015-01-16T08:00:00.000000000', '2015-02-16T08:00:00.000000000',
+       '2015-03-16T07:00:00.000000000', '2015-04-16T07:00:00.000000000',
+       '2015-05-16T07:00:00.000000000', '2015-06-16T07:00:00.000000000',
+       '2015-07-16T07:00:00.000000000', '2015-08-16T07:00:00.000000000',
+       '2015-09-16T07:00:00.000000000', '2015-10-16T07:00:00.000000000',
+       '2015-11-16T08:00:00.000000000', '2015-12-16T08:00:00.000000000',
+       '2016-01-16T08:00:00.000000000', '2016-02-16T08:00:00.000000000',
+       '2016-03-16T07:00:00.000000000', '2016-04-16T07:00:00.000000000',
+       '2016-05-16T07:00:00.000000000', '2016-06-16T07:00:00.000000000',
+       '2016-07-16T07:00:00.000000000', '2016-08-16T07:00:00.000000000',
+       '2016-09-16T07:00:00.000000000', '2016-10-16T07:00:00.000000000',
+       '2016-11-16T08:00:00.000000000', '2016-12-16T08:00:00.000000000',
+       '2017-01-16T08:00:00.000000000', '2017-02-16T08:00:00.000000000',
+       '2017-03-16T07:00:00.000000000', '2017-04-16T07:00:00.000000000',
+       '2017-05-16T07:00:00.000000000', '2017-06-16T07:00:00.000000000',
+       '2017-07-16T07:00:00.000000000', '2017-08-16T07:00:00.000000000',
+       '2017-09-16T07:00:00.000000000', '2017-10-16T07:00:00.000000000',
+       '2017-11-16T08:00:00.000000000', '2017-12-16T08:00:00.000000000',
+       '2018-01-16T08:00:00.000000000', '2018-02-16T08:00:00.000000000',
+       '2018-03-16T07:00:00.000000000', '2018-04-16T07:00:00.000000000',
+       '2018-05-16T07:00:00.000000000', '2018-06-16T07:00:00.000000000',
+       '2018-07-16T07:00:00.000000000', '2018-08-16T07:00:00.000000000',
+       '2018-09-16T07:00:00.000000000', '2018-10-16T07:00:00.000000000',
+       '2018-11-16T08:00:00.000000000', '2018-12-16T08:00:00.000000000',
+       '2019-01-16T08:00:00.000000000', '2019-02-16T08:00:00.000000000',
+       '2019-03-16T07:00:00.000000000', '2019-04-16T07:00:00.000000000',
+       '2019-05-16T07:00:00.000000000', '2019-06-16T07:00:00.000000000',
+       '2019-07-16T07:00:00.000000000', '2019-08-16T07:00:00.000000000',
+       '2019-09-16T07:00:00.000000000', '2019-10-16T07:00:00.000000000',
+       '2019-11-16T08:00:00.000000000', '2019-12-16T08:00:00.000000000',
+       '2020-01-16T08:00:00.000000000', '2020-02-16T08:00:00.000000000',
+       '2020-03-16T07:00:00.000000000', '2020-04-16T07:00:00.000000000',
+       '2020-05-16T07:00:00.000000000', '2020-06-16T07:00:00.000000000',
+       '2020-07-16T07:00:00.000000000', '2020-08-16T07:00:00.000000000',
+       '2020-09-16T07:00:00.000000000', '2020-10-16T07:00:00.000000000',
+       '2020-11-16T08:00:00.000000000', '2020-12-16T08:00:00.000000000',
+       '2021-01-16T08:00:00.000000000', '2021-02-16T08:00:00.000000000',
+       '2021-03-16T07:00:00.000000000', '2021-04-16T07:00:00.000000000',
+       '2021-05-16T07:00:00.000000000', '2021-06-16T07:00:00.000000000',
+       '2021-07-16T07:00:00.000000000', '2021-08-16T07:00:00.000000000',
+       '2021-09-16T07:00:00.000000000', '2021-10-16T07:00:00.000000000',
+       '2021-11-16T08:00:00.000000000', '2021-12-16T08:00:00.000000000',
+       '2022-01-16T08:00:00.000000000', '2022-02-16T08:00:00.000000000',
+       '2022-03-16T07:00:00.000000000', '2022-04-16T07:00:00.000000000',
+       '2022-05-16T07:00:00.000000000', '2022-06-16T07:00:00.000000000',
+       '2022-07-16T07:00:00.000000000', '2022-08-16T07:00:00.000000000',
+       '2022-09-16T07:00:00.000000000', '2022-10-16T07:00:00.000000000',
+       '2022-11-16T08:00:00.000000000', '2022-12-16T08:00:00.000000000'],
+      dtype='datetime64[ns]')</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">latitude</span></div><div class="xr-var-dims">(latitude)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">89.96 89.88 89.79 ... -89.88 -89.96</div><input id="attrs-e73a74c9-1242-4b11-9268-4294ee251456" class="xr-var-attrs-in" type="checkbox"><label for="attrs-e73a74c9-1242-4b11-9268-4294ee251456" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-245e5488-0722-4f52-bfe8-4a3ee81b39f6" class="xr-var-data-in" type="checkbox"><label for="data-245e5488-0722-4f52-bfe8-4a3ee81b39f6" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>_CoordinateAxisType :</span></dt><dd>Lat</dd><dt><span>actual_range :</span></dt><dd>[-89.95834  89.95834]</dd><dt><span>axis :</span></dt><dd>Y</dd><dt><span>ioos_category :</span></dt><dd>Location</dd><dt><span>long_name :</span></dt><dd>Latitude</dd><dt><span>standard_name :</span></dt><dd>latitude</dd><dt><span>units :</span></dt><dd>degrees_north</dd><dt><span>valid_max :</span></dt><dd>90.0</dd><dt><span>valid_min :</span></dt><dd>-90.0</dd></dl></div><div class="xr-var-data"><pre>array([ 89.95834,  89.875  ,  89.79166, ..., -89.79167, -89.87501, -89.95834])</pre></div></li><li class="xr-var-item"><div class="xr-var-name"><span class="xr-has-index">longitude</span></div><div class="xr-var-dims">(longitude)</div><div class="xr-var-dtype">float64</div><div class="xr-var-preview xr-preview">-180.0 -179.9 ... 179.9 180.0</div><input id="attrs-6bb29aaa-8fef-4001-b628-f4c4efeb95d0" class="xr-var-attrs-in" type="checkbox"><label for="attrs-6bb29aaa-8fef-4001-b628-f4c4efeb95d0" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-6c030b92-188f-44be-91e6-283b3b70401a" class="xr-var-data-in" type="checkbox"><label for="data-6c030b92-188f-44be-91e6-283b3b70401a" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>_CoordinateAxisType :</span></dt><dd>Lon</dd><dt><span>actual_range :</span></dt><dd>[-179.9583  179.9583]</dd><dt><span>axis :</span></dt><dd>X</dd><dt><span>ioos_category :</span></dt><dd>Location</dd><dt><span>long_name :</span></dt><dd>Longitude</dd><dt><span>standard_name :</span></dt><dd>longitude</dd><dt><span>units :</span></dt><dd>degrees_east</dd></dl></div><div class="xr-var-data"><pre>array([-179.9583, -179.875 , -179.7917, ...,  179.7917,  179.875 ,  179.9583])</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-6595e3a7-e0b7-4483-ba50-22148cdcbac6" class="xr-section-summary-in" type="checkbox" checked=""><label for="section-6595e3a7-e0b7-4483-ba50-22148cdcbac6" class="xr-section-summary">Data variables: <span>(1)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-var-name"><span>psi</span></div><div class="xr-var-dims">(time, latitude, longitude)</div><div class="xr-var-dtype">float32</div><div class="xr-var-preview xr-preview">...</div><input id="attrs-21e59545-46ec-4576-a4b2-aff3590fad26" class="xr-var-attrs-in" type="checkbox"><label for="attrs-21e59545-46ec-4576-a4b2-aff3590fad26" title="Show/Hide attributes"><svg class="icon xr-icon-file-text2"><use href="#icon-file-text2"></use></svg></label><input id="data-0685e016-e9d9-4d1b-98da-811ea2e9f7ee" class="xr-var-data-in" type="checkbox"><label for="data-0685e016-e9d9-4d1b-98da-811ea2e9f7ee" title="Show/Hide data repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-var-attrs"><dl class="xr-attrs"><dt><span>colorBarContinuous :</span></dt><dd>false</dd><dt><span>colorBarMaximum :</span></dt><dd>0.4</dd><dt><span>colorBarMinimum :</span></dt><dd>-0.4</dd><dt><span>colorBarNSections :</span></dt><dd>8</dd><dt><span>coverage_content_type :</span></dt><dd>modelResult</dd><dt><span>ioos_category :</span></dt><dd>Other</dd><dt><span>long_name :</span></dt><dd>Absolute Relative Difference of Net Primary Productivity</dd><dt><span>source :</span></dt><dd>NOAA CoastWatch West Coast Node</dd><dt><span>units :</span></dt><dd>1</dd></dl></div><div class="xr-var-data"><pre>[1119744000 values with dtype=float32]</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-8b68416c-60b1-44ab-b02b-ef414389ea9a" class="xr-section-summary-in" type="checkbox"><label for="section-8b68416c-60b1-44ab-b02b-ef414389ea9a" class="xr-section-summary">Indexes: <span>(3)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><ul class="xr-var-list"><li class="xr-var-item"><div class="xr-index-name"><div>time</div></div><div class="xr-index-preview">PandasIndex</div><input type="checkbox" disabled=""><label></label><input id="index-4ddd9cdf-76e0-4bde-bbc3-83b01ece059c" class="xr-index-data-in" type="checkbox"><label for="index-4ddd9cdf-76e0-4bde-bbc3-83b01ece059c" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(DatetimeIndex(['2013-01-16 08:00:00', '2013-02-16 08:00:00',
+               '2013-03-16 07:00:00', '2013-04-16 07:00:00',
+               '2013-05-16 07:00:00', '2013-06-16 07:00:00',
+               '2013-07-16 07:00:00', '2013-08-16 07:00:00',
+               '2013-09-16 07:00:00', '2013-10-16 07:00:00',
+               ...
+               '2022-03-16 07:00:00', '2022-04-16 07:00:00',
+               '2022-05-16 07:00:00', '2022-06-16 07:00:00',
+               '2022-07-16 07:00:00', '2022-08-16 07:00:00',
+               '2022-09-16 07:00:00', '2022-10-16 07:00:00',
+               '2022-11-16 08:00:00', '2022-12-16 08:00:00'],
+              dtype='datetime64[ns]', name='time', length=120, freq=None))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>latitude</div></div><div class="xr-index-preview">PandasIndex</div><input type="checkbox" disabled=""><label></label><input id="index-f79e3b7e-0645-4586-b3b0-157e907590bc" class="xr-index-data-in" type="checkbox"><label for="index-f79e3b7e-0645-4586-b3b0-157e907590bc" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([ 89.95834,    89.875,  89.79166,  89.70834,    89.625,  89.54166,
+        89.45834,    89.375,  89.29166,  89.20834,
+       ...
+       -89.20834, -89.29167, -89.37501, -89.45834, -89.54167, -89.62501,
+       -89.70834, -89.79167, -89.87501, -89.95834],
+      dtype='float64', name='latitude', length=2160))</pre></div></li><li class="xr-var-item"><div class="xr-index-name"><div>longitude</div></div><div class="xr-index-preview">PandasIndex</div><input type="checkbox" disabled=""><label></label><input id="index-a435bbc7-5a98-43dc-9fa2-173e5383b74b" class="xr-index-data-in" type="checkbox"><label for="index-a435bbc7-5a98-43dc-9fa2-173e5383b74b" title="Show/Hide index repr"><svg class="icon xr-icon-database"><use href="#icon-database"></use></svg></label><div class="xr-index-data"><pre>PandasIndex(Index([-179.9583,  -179.875, -179.7917, -179.7083,  -179.625, -179.5417,
+       -179.4583,  -179.375, -179.2917, -179.2083,
+       ...
+        179.2083,  179.2917,   179.375,  179.4583,  179.5417,   179.625,
+        179.7083,  179.7917,   179.875,  179.9583],
+      dtype='float64', name='longitude', length=4320))</pre></div></li></ul></div></li><li class="xr-section-item"><input id="section-d40562f6-2cb0-47cb-b0f4-d7b7211d76b5" class="xr-section-summary-in" type="checkbox"><label for="section-d40562f6-2cb0-47cb-b0f4-d7b7211d76b5" class="xr-section-summary">Attributes: <span>(45)</span></label><div class="xr-section-inline-details"></div><div class="xr-section-details"><dl class="xr-attrs"><dt><span>acknowledgement :</span></dt><dd>This project was supported by the NOAA Office of Satellite Ground Services to CoastWatch West Coast Node via NOAA SWFSC. Support was also provided by NOAA CoastWatch.</dd><dt><span>cdm_data_type :</span></dt><dd>Grid</dd><dt><span>contributor :</span></dt><dd>Dale Robinson, Isaac Schroeder</dd><dt><span>contributor_role :</span></dt><dd>development and project management, production code</dd><dt><span>Conventions :</span></dt><dd>COARDS, CF-1.6, ACDD-1.3</dd><dt><span>creator_name :</span></dt><dd>NOAA CoastWatch West Coast Node</dd><dt><span>creator_type :</span></dt><dd>institution</dd><dt><span>creator_url :</span></dt><dd>https://coastwatch.pfeg.noaa.gov/</dd><dt><span>Easternmost_Easting :</span></dt><dd>179.9583</dd><dt><span>geospatial_lat_max :</span></dt><dd>89.95834</dd><dt><span>geospatial_lat_min :</span></dt><dd>-89.95834</dd><dt><span>geospatial_lat_units :</span></dt><dd>degrees_north</dd><dt><span>geospatial_lon_max :</span></dt><dd>179.9583</dd><dt><span>geospatial_lon_min :</span></dt><dd>-179.9583</dd><dt><span>geospatial_lon_units :</span></dt><dd>degrees_east</dd><dt><span>history :</span></dt><dd>Tue Apr  9 13:19:40 2024: The unbiased relative difference was calculated from VIIRS-SNPP and MODIS-Aqua primary productivity data using Python code stored at https://github.com/CoastWatch-WestCoast/interim_primary_productivity
+2025-09-09T22:19:40Z (local files)
+2025-09-09T22:19:40Z https://coastwatch.pfeg.noaa.gov/erddap/griddap/netpp_psi_snpp_modis.das</dd><dt><span>id :</span></dt><dd>psi_primprod_snpp_monthly_9km</dd><dt><span>infoUrl :</span></dt><dd>https://coastwatch.pfeg.noaa.gov/projects/netpp</dd><dt><span>institution :</span></dt><dd>NOAA/NESDIS/STAR/CoastWatch/West Coast</dd><dt><span>instrument :</span></dt><dd>VIIRS, MODIS</dd><dt><span>keywords :</span></dt><dd>calculating, data, latitude, longitude, psi, summation, time</dd><dt><span>keywords_vocabulary :</span></dt><dd>GCMD Science Keywords</dd><dt><span>license :</span></dt><dd>The data may be used and redistributed for free but is not intended
+for legal use, since it may contain inaccuracies. Neither the data
+Contributor, ERD, NOAA, nor the United States Government, nor any
+of their employees or contractors, makes any warranty, express or
+implied, including warranties of merchantability and fitness for a
+particular purpose, or assumes any legal liability for the accuracy,
+completeness, or usefulness, of this information.</dd><dt><span>map_projection :</span></dt><dd>geographic</dd><dt><span>naming_authority :</span></dt><dd>gov.noaa.pfeg.coastwatch</dd><dt><span>NCO :</span></dt><dd>netCDF Operators version 4.9.5 (Homepage = http://nco.sf.net, Code = https://github.com/nco/nco)</dd><dt><span>Northernmost_Northing :</span></dt><dd>89.95834</dd><dt><span>platform :</span></dt><dd>NPP, Aqua</dd><dt><span>proj4_string :</span></dt><dd>+proj=eqc +lat_ts=0 +lat_0=0 +x_0=0 +y_0=0 +ellps=WGS84 +datum=WGS84 +units=m +no_defs +lon_0=0.000000</dd><dt><span>project :</span></dt><dd>NOAA CoastWatch Interim Primary Productivity</dd><dt><span>publisher_name :</span></dt><dd>NOAA/NMFS/SWFSC/ERD, NOAA/NESDIS/STAR/CoastWatch/West Coast Node</dd><dt><span>publisher_type :</span></dt><dd>group</dd><dt><span>publisher_url :</span></dt><dd>https://coastwatch.pfeg.noaa.gov</dd><dt><span>references :</span></dt><dd>Melina et al. Remote Sensing of Environment 203 (2017) 139?151, Behrenfeld and Falkowski. Limnol. Oceanogr. 42 (1997) 1-20.</dd><dt><span>source :</span></dt><dd>primary productivity measurements based on satellite observations from VIIRS-SNPP and MODIS-Aqua</dd><dt><span>sourceUrl :</span></dt><dd>(local files)</dd><dt><span>Southernmost_Northing :</span></dt><dd>-89.95834</dd><dt><span>spatialResolution :</span></dt><dd>9.28 km</dd><dt><span>standard_name_vocabulary :</span></dt><dd>CF Standard Name Table v70</dd><dt><span>summary :</span></dt><dd>The unbiased relative difference (Psi) between primary productivity (netPP) calculated using VIIRS-SNPP and MODIS-Aqua primary productivity data. For each pixel, psi is calculated as netPP(viirs)- netPP(modis) divided by the mean of netPP(viirs) and netPP(modis) as described by M�lina et al. 2017. Primary productivity was calculated as described by Behrenfeld and Falkowski 1997. This dataset contains pixel-by-pixel Psi for the globe for each month between January 2013 to December 2022 at 9 kilometer spatial resolution.</dd><dt><span>time_coverage_end :</span></dt><dd>2022-12-16T08:00:00Z</dd><dt><span>time_coverage_resolution :</span></dt><dd>P1M</dd><dt><span>time_coverage_start :</span></dt><dd>2013-01-16T08:00:00Z</dd><dt><span>title :</span></dt><dd>Unbiased Relative Difference of Net Primary Productivity, VIIRS SNPP vs MODIS Aqua, 9Km,
+Monthly, 2013-2022, Global</dd><dt><span>Westernmost_Easting :</span></dt><dd>-179.9583</dd></dl></div></li></ul></div></div>
+</div>
+</div>
+<section id="note-that-the-data-variable-above-output-is-named-psi." class="level3">
+<h3 class="anchored" data-anchor-id="note-that-the-data-variable-above-output-is-named-psi.">Note that the Data variable (above output) is named “psi”.</h3>
+<ul>
+<li><p>We will need that name when using the subset_ds() function.</p></li>
+<li><p>Let’s put the Data variable name into a variable.</p></li>
+</ul>
+<div id="d5219fca" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set erddap_var with data variable name</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>erddap_var <span class="op">=</span> <span class="st">"psi"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+</section>
+<section id="subset-the-satellite-data" class="level2">
+<h2 class="anchored" data-anchor-id="subset-the-satellite-data">Subset the satellite data</h2>
+<ul>
+<li>Pass the geo_bnds variable containing bounding box coordinates to the subset_ds() function.</li>
+</ul>
+<p><strong>The result will be a dataset that is:</strong><br>
+* Spatially subsetted to the dimensions of the bounding box that contains all the months of the timeseries corresponding to the specified VIIRS sensor (either SNPP or NOAA20).</p>
+<pre><code>- **120 months (10-years) for VIIRS-SNPP**
+
+- **60 months (5-years) for VIIRS-NOAA20**</code></pre>
+<div id="1a44dcf7" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>subsetted_ds <span class="op">=</span> subset_ds(ds, erddap_var, geo_bnds)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="determine-the-approximate-download-size" class="level2">
+<h2 class="anchored" data-anchor-id="determine-the-approximate-download-size">Determine the approximate download size</h2>
+<p>Before downloading the data, it’s helpful to estimate the size of your data request to ERDDAP. * The data still has not been downloaded. That will happen later when an operation that needs the data is initiated.</p>
+<p>Depending on the installation, ERDDAP has maximum single download <strong>limit of 2 Gigabytes</strong>.<br>
+* That seems large, but with satellite dataset large data volume adds up quickly.</p>
+<p>The calculation for data download size estimate is below. * If the download size is nearing the single download limit, try splitting your download request into 2 or several separate requests and concatenate the data from the separate request.</p>
+<section id="the-request-in-this-example-is-around-85-mb-well-within-the-single-download-limit." class="level4">
+<h4 class="anchored" data-anchor-id="the-request-in-this-example-is-around-85-mb-well-within-the-single-download-limit.">The request in this example is around 85 MB, well within the single download limit.</h4>
+<div id="9969dc79" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the number of longitude pixels along the longitude axis in the subsetted dataset</span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>pixel_lon_axis <span class="op">=</span> subsetted_ds.longitude.shape[<span class="dv">0</span>]</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># get the number of latitude pixels along the latitude axis in the subsetted dataset</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>pixel_lon_axis <span class="op">=</span> subsetted_ds.latitude.shape[<span class="dv">0</span>]</span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a><span class="co"># set the memory size for a float data type in bytes</span></span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>float_memory_size <span class="op">=</span> <span class="dv">4</span></span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a><span class="co"># get the number of timesteps in the subsetted dataset</span></span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>no_of_timesteps <span class="op">=</span> subsetted_ds.time.shape[<span class="dv">0</span>]</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a><span class="co"># calculate the approximate download size</span></span>
+<span id="cb14-14"><a href="#cb14-14" aria-hidden="true" tabindex="-1"></a>download_size <span class="op">=</span> (</span>
+<span id="cb14-15"><a href="#cb14-15" aria-hidden="true" tabindex="-1"></a>    pixel_lon_axis <span class="op">*</span> pixel_lon_axis <span class="op">*</span> float_memory_size <span class="op">*</span> no_of_timesteps</span>
+<span id="cb14-16"><a href="#cb14-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb14-17"><a href="#cb14-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-18"><a href="#cb14-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"download_size"</span>, <span class="bu">int</span>(download_size) <span class="op">/</span> <span class="dv">1000000</span>, <span class="st">"Mb"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>download_size 84.26928 Mb</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="create-a-mask-and-apply-it-to-the-data" class="level2">
+<h2 class="anchored" data-anchor-id="create-a-mask-and-apply-it-to-the-data">Create a mask and apply it to the data</h2>
+<p><strong>The result will be datasets that are:</strong><br>
+* Masked to retain only the data within the shapefile.</p>
+<div id="565e8351" class="cell" data-tags="[&quot;Shapefile method&quot;]" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create the mask</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>mask <span class="op">=</span> region.mask(subsetted_ds.longitude, subsetted_ds.latitude)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># apply mask the the satellite data</span></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>psi_ds <span class="op">=</span> subsetted_ds.where(mask <span class="op">==</span> region.numbers[<span class="dv">0</span>])</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># set workaround flag</span></span>
+<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>wa_flag <span class="op">=</span> <span class="va">False</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="workaround-if-you-do-not-have-a-shapefile" class="level2">
+<h2 class="anchored" data-anchor-id="workaround-if-you-do-not-have-a-shapefile">Workaround if you do not have a shapefile</h2>
+<p>If you don’t have a shapefile, you can instead select a rectangular area define by a latitude and a longitude range that encompasses your area of interest.</p>
+<section id="please-see-appendix-b-steps-for-use-without-a-shapefile-below." class="level4">
+<h4 class="anchored" data-anchor-id="please-see-appendix-b-steps-for-use-without-a-shapefile-below.">Please see <a href="#no_shapefile">Appendix B: Steps for use without a shapefile</a> below.</h4>
+</section>
+</section>
+<section id="calculate-the-monthly-mean-for-each-month-to-create-a-timeseries" class="level2">
+<h2 class="anchored" data-anchor-id="calculate-the-monthly-mean-for-each-month-to-create-a-timeseries">Calculate the monthly mean for each month to create a timeseries</h2>
+<p>For each month of the timeseries (120-month for SNPP or 60-month for NOAA20) generate the mean ψ<sup>netPP</sup>.</p>
+<p>$ {}^{netPP} = &nbsp;<em>{i=1}^{N} ^{netPP}</em>{i} $</p>
+<ul>
+<li>Where for each month N is the the number of pixels (<i>i</i>) within a month’s grid with ψ<sup>netPP</sup> values .</li>
+</ul>
+<p>Plot the timeseries on an XY graph. * Uncomment the last three lines to save the graph and dataframe.</p>
+<section id="results-for-viirs-snpp---modis-aqua-using-shapefile-workaround-results-will-be-different" class="level4">
+<h4 class="anchored" data-anchor-id="results-for-viirs-snpp---modis-aqua-using-shapefile-workaround-results-will-be-different"><strong>Results for VIIRS-SNPP - MODIS-Aqua using shapefile</strong> (workaround results will be different):</h4>
+<ul>
+<li><p><span style="text-decoration: overline;">ψ</span><sup>netPP</sup> values in general were between 0 and 0.05 over most of the timeseries, meaning netPP<sub>SNPP</sub> was 0 to +5% greater than the mean value for both datasets.</p></li>
+<li><p><span style="text-decoration: overline;">ψ</span><sup>netPP</sup> showed greater variability from 2022-2023.</p></li>
+</ul>
+<div id="6ff9eb33" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># generate the timeseries of mean monthly data</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>psi_mean <span class="op">=</span> psi_ds.mean(dim<span class="op">=</span>[<span class="st">"latitude"</span>, <span class="st">"longitude"</span>])</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a><span class="co"># plot the results</span></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">8</span>, <span class="dv">4</span>))</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the SeaWiFS data</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>plt.plot_date(</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    psi_mean.time,</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    psi_mean,</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"o"</span>,</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>    markersize<span class="op">=</span><span class="dv">5</span>,</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a>    label<span class="op">=</span><span class="st">"Psi"</span>,</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a>    c<span class="op">=</span><span class="st">"black"</span>,</span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>    linestyle<span class="op">=</span><span class="st">"-"</span>,</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="dv">1</span>,</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a>plt.axhline(y<span class="op">=</span><span class="fl">0.05</span>, color<span class="op">=</span><span class="st">"r"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, label<span class="op">=</span><span class="st">"+0.05 (+5%)"</span>)</span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a>plt.axhline(y<span class="op">=-</span><span class="fl">0.05</span>, color<span class="op">=</span><span class="st">"b"</span>, linestyle<span class="op">=</span><span class="st">"--"</span>, label<span class="op">=</span><span class="st">"-0.05 (-5%)"</span>)</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>plt.title(</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"</span><span class="dv">$\b</span><span class="vs">ar{</span><span class="er">\</span><span class="vs">psi}_{month}</span><span class="dv">$</span><span class="vs">"</span></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"Timeseries: Unbiased Relative Difference VIIRS-</span><span class="sc">{</span>sensor<span class="sc">.</span>upper()<span class="sc">}</span><span class="ss"> - MODIS-Aqua"</span></span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>plt.ylim([<span class="op">-</span><span class="fl">0.2</span>, <span class="fl">0.2</span>])  <span class="co"># adjust this range to fit your area</span></span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">"Unbiased Relative Difference (Psi)"</span>)</span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">"Year"</span>)</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a><span class="co"># uncomment the next three lines to save the figure and the dataframe</span></span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a><span class="co"># merged_df = psi_mean.to_dataframe()</span></span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a><span class="co"># merged_df.to_csv('my_psi_timeseries.csv', index=False)</span></span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.savefig('my_psi_timeseries.png')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="longhurst_unbiased_relative_difference_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="visualize-the-spatial-variability-in-the-10-year-monthly-ψ-mean-for-viirs-snpp---modis-aqua" class="level2">
+<h2 class="anchored" data-anchor-id="visualize-the-spatial-variability-in-the-10-year-monthly-ψ-mean-for-viirs-snpp---modis-aqua">Visualize the spatial variability in the 10-year monthly ψ mean for VIIRS-SNPP - MODIS-Aqua</h2>
+<p>Plot the spatial variability in the 10-year monthly ψ mean on the selected Longhurst Province. * Uncomment the last line to save the graph.</p>
+<section id="results-for-viirs-snpp---modis-aqua-ccal-region-using-shapefile-workaround-results-will-be-different" class="level4">
+<h4 class="anchored" data-anchor-id="results-for-viirs-snpp---modis-aqua-ccal-region-using-shapefile-workaround-results-will-be-different"><strong>Results for VIIRS-SNPP - MODIS-Aqua CCAL Region using shapefile</strong> (workaround results will be different):</h4>
+<ul>
+<li><p>Most of the region is positive, meaning VIIRS-SNPP values &gt; MODIS-Aqua values.</p></li>
+<li><p>The spots of higher difference are shown along the coastline where upwelling occurs.</p></li>
+</ul>
+<div id="8c044af9" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cartopy.crs <span class="im">as</span> ccrs</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cartopy.feature <span class="im">as</span> cfeature</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the 10-year mean across time for ψ</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>mean_10year <span class="op">=</span> psi_ds.mean(dim<span class="op">=</span><span class="st">"time"</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the 10-year mean ψ with a PlateCarree map projection</span></span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots(</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">5</span>),</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    subplot_kw<span class="op">=</span>{<span class="st">"projection"</span>: ccrs.PlateCarree()}</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Pseudocolor plot</span></span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>pc <span class="op">=</span> ax.pcolormesh(</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    mean_10year.longitude,</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>    mean_10year.latitude,</span>
+<span id="cb18-17"><a href="#cb18-17" aria-hidden="true" tabindex="-1"></a>    mean_10year,</span>
+<span id="cb18-18"><a href="#cb18-18" aria-hidden="true" tabindex="-1"></a>    vmin<span class="op">=-</span><span class="fl">0.2</span>,</span>
+<span id="cb18-19"><a href="#cb18-19" aria-hidden="true" tabindex="-1"></a>    vmax<span class="op">=</span><span class="fl">0.2</span>,</span>
+<span id="cb18-20"><a href="#cb18-20" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"gist_ncar"</span>,</span>
+<span id="cb18-21"><a href="#cb18-21" aria-hidden="true" tabindex="-1"></a>    shading<span class="op">=</span><span class="st">"auto"</span>,</span>
+<span id="cb18-22"><a href="#cb18-22" aria-hidden="true" tabindex="-1"></a>    transform<span class="op">=</span>ccrs.PlateCarree()</span>
+<span id="cb18-23"><a href="#cb18-23" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-25"><a href="#cb18-25" aria-hidden="true" tabindex="-1"></a><span class="co"># Add land, coastlines, country borders, and U.S. state lines</span></span>
+<span id="cb18-26"><a href="#cb18-26" aria-hidden="true" tabindex="-1"></a>ax.add_feature(cfeature.LAND, facecolor<span class="op">=</span><span class="st">"lightgray"</span>)</span>
+<span id="cb18-27"><a href="#cb18-27" aria-hidden="true" tabindex="-1"></a>ax.add_feature(cfeature.COASTLINE, linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb18-28"><a href="#cb18-28" aria-hidden="true" tabindex="-1"></a>ax.add_feature(cfeature.BORDERS, linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb18-29"><a href="#cb18-29" aria-hidden="true" tabindex="-1"></a>ax.add_feature(cfeature.STATES, linewidth<span class="op">=</span><span class="fl">0.3</span>)  <span class="co"># &lt;- U.S. state lines</span></span>
+<span id="cb18-30"><a href="#cb18-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-31"><a href="#cb18-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Add gridlines with lat/lon labels</span></span>
+<span id="cb18-32"><a href="#cb18-32" aria-hidden="true" tabindex="-1"></a>gl <span class="op">=</span> ax.gridlines(</span>
+<span id="cb18-33"><a href="#cb18-33" aria-hidden="true" tabindex="-1"></a>    draw_labels<span class="op">=</span><span class="va">True</span>,</span>
+<span id="cb18-34"><a href="#cb18-34" aria-hidden="true" tabindex="-1"></a>    linewidth<span class="op">=</span><span class="fl">0.5</span>,</span>
+<span id="cb18-35"><a href="#cb18-35" aria-hidden="true" tabindex="-1"></a>    color<span class="op">=</span><span class="st">"gray"</span>,</span>
+<span id="cb18-36"><a href="#cb18-36" aria-hidden="true" tabindex="-1"></a>    alpha<span class="op">=</span><span class="fl">0.5</span>,</span>
+<span id="cb18-37"><a href="#cb18-37" aria-hidden="true" tabindex="-1"></a>    linestyle<span class="op">=</span><span class="st">"--"</span></span>
+<span id="cb18-38"><a href="#cb18-38" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-39"><a href="#cb18-39" aria-hidden="true" tabindex="-1"></a>gl.top_labels <span class="op">=</span> <span class="va">False</span>   <span class="co"># hide top labels</span></span>
+<span id="cb18-40"><a href="#cb18-40" aria-hidden="true" tabindex="-1"></a>gl.right_labels <span class="op">=</span> <span class="va">False</span> <span class="co"># hide right labels</span></span>
+<span id="cb18-41"><a href="#cb18-41" aria-hidden="true" tabindex="-1"></a>gl.xlabel_style <span class="op">=</span> {<span class="st">"size"</span>: <span class="dv">10</span>}</span>
+<span id="cb18-42"><a href="#cb18-42" aria-hidden="true" tabindex="-1"></a>gl.ylabel_style <span class="op">=</span> {<span class="st">"size"</span>: <span class="dv">10</span>}</span>
+<span id="cb18-43"><a href="#cb18-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-44"><a href="#cb18-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Axis title</span></span>
+<span id="cb18-45"><a href="#cb18-45" aria-hidden="true" tabindex="-1"></a>ax.set_title(</span>
+<span id="cb18-46"><a href="#cb18-46" aria-hidden="true" tabindex="-1"></a>    <span class="vs">r"</span><span class="dv">$\b</span><span class="vs">ar{</span><span class="er">\</span><span class="vs">psi}_{lat/lon}</span><span class="dv">$</span><span class="vs">"</span></span>
+<span id="cb18-47"><a href="#cb18-47" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"Unbiased Relative Difference from</span><span class="ch">\n</span><span class="ss">"</span></span>
+<span id="cb18-48"><a href="#cb18-48" aria-hidden="true" tabindex="-1"></a>    <span class="ss">f"</span><span class="sc">{</span>time_series<span class="sc">}</span><span class="ss"> for VIIRS-</span><span class="sc">{</span>sensor<span class="sc">.</span>upper()<span class="sc">}</span><span class="ss"> - MODIS-Aqua"</span>,</span>
+<span id="cb18-49"><a href="#cb18-49" aria-hidden="true" tabindex="-1"></a>    fontsize<span class="op">=</span><span class="dv">12</span></span>
+<span id="cb18-50"><a href="#cb18-50" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb18-51"><a href="#cb18-51" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-52"><a href="#cb18-52" aria-hidden="true" tabindex="-1"></a><span class="co"># Colorbar</span></span>
+<span id="cb18-53"><a href="#cb18-53" aria-hidden="true" tabindex="-1"></a>cbar <span class="op">=</span> fig.colorbar(pc, ax<span class="op">=</span>ax, orientation<span class="op">=</span><span class="st">"vertical"</span>, label<span class="op">=</span><span class="vs">r"</span><span class="dv">$\b</span><span class="vs">ar{</span><span class="er">\</span><span class="vs">psi}_{lat/lon}</span><span class="dv">$</span><span class="vs">"</span>)</span>
+<span id="cb18-54"><a href="#cb18-54" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-55"><a href="#cb18-55" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
+<span id="cb18-56"><a href="#cb18-56" aria-hidden="true" tabindex="-1"></a>plt.show()</span>
+<span id="cb18-57"><a href="#cb18-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-58"><a href="#cb18-58" aria-hidden="true" tabindex="-1"></a><span class="co"># uncomment the next last line to save the figure</span></span>
+<span id="cb18-59"><a href="#cb18-59" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.savefig('my_psi_spatial_variability_10yearmean.png')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="longhurst_unbiased_relative_difference_files/figure-html/cell-16-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="appendix-a-visualize-the-unmasked-and-masked-data-on-a-map" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-a-visualize-the-unmasked-and-masked-data-on-a-map">Appendix A: Visualize the unmasked and masked data on a map</h2>
+<p>The maps shows the full coverage of the bounding box and the masked area set by the shapefile for CCAL.</p>
+<div id="05d31d6d" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># if wa_flag is True, set 'plot_ds' to 'psi_ds', if not use 'subsetted_ds'</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> wa_flag:</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>    plot_ds <span class="op">=</span> psi_ds</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="cf">else</span>:</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    plot_ds <span class="op">=</span> subsetted_ds</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="co"># create the figure</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>fig, (ax1, ax2) <span class="op">=</span> plt.subplots(<span class="dv">1</span>, <span class="dv">2</span>, figsize<span class="op">=</span>(<span class="dv">6</span>, <span class="dv">4</span>))</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a><span class="co"># customize the first subplot (ax1)</span></span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>ax1.set_title(<span class="st">"Map of CCAL bounding box"</span>)</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>ax1.set_yticks([])</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>ax1.set_xticks([])</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a><span class="co"># plot data on ax1 where plot_ds = subsetted_ds and reverse latitude order for correct orientation</span></span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>ax1.pcolormesh(</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>    plot_ds[<span class="dv">7</span>].reindex(latitude<span class="op">=</span><span class="bu">list</span>(<span class="bu">reversed</span>(plot_ds.latitude))),</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    vmin<span class="op">=-</span><span class="fl">0.3</span>,</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a>    vmax<span class="op">=</span><span class="fl">0.3</span>,</span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"gist_ncar"</span>,</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a><span class="co"># customize the second subplot (ax2)</span></span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>ax2.set_title(<span class="st">"Map of CCAL masked area"</span>)</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>ax2.set_yticks([])</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>ax2.set_xticks([])</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a><span class="co"># plot data on ax2 where plot_ds = psi_ds and reverse latitude order for correct orientation</span></span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>pc <span class="op">=</span> ax2.pcolormesh(</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>    psi_ds[<span class="dv">7</span>].reindex(latitude<span class="op">=</span><span class="bu">list</span>(<span class="bu">reversed</span>(psi_ds.latitude))),</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>    vmin<span class="op">=-</span><span class="fl">0.4</span>,</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>    vmax<span class="op">=</span><span class="fl">0.4</span>,</span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>    cmap<span class="op">=</span><span class="st">"gist_ncar"</span>,</span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a><span class="co"># add a color bar to the figure</span></span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>fig.colorbar(pc)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="longhurst_unbiased_relative_difference_files/figure-html/cell-17-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="appendix-b-steps-for-use-without-a-shapefile" class="level2">
+<h2 class="anchored" data-anchor-id="appendix-b-steps-for-use-without-a-shapefile">Appendix B: Steps for use without a shapefile</h2>
+<p><a id="no_shapefile"></a> ### <strong>Do not run this code if you have used a shapefile above!</strong> Use this method in place of cells tagged “Shapefile method”.</p>
+<p>If you don’t have a shapefile, you can just select a rectangular area that encompasses your area of interest. The area is define by a the maximum and minimum values of a latitude and a longitude range.</p>
+<p><strong>Steps</strong>:<br>
+1. Load the geo_bnds dictionary with the minimum and maximum values for latitude and longitude the area of interest. * An area off the Oregon coast is used the example below:</p>
+<pre><code>* Latitude range: 42.0&amp;deg; to 46.0&amp;deg; N
+
+* Longitude range: -128.0&amp;deg; to -124&amp;deg; E</code></pre>
+<ol start="2" type="1">
+<li>Proceed through the data download and subsetting steps as listed below:</li>
+</ol>
+<ul>
+<li><p>Note that the masking steps have been omitted.</p></li>
+<li><p>The returns from subset_ds() for MODIS netPP and VIIRS netPP are labeled modis_ds and viirs_ds, repsectively.</p></li>
+</ul>
+<div id="90f8f563" class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>geo_bnds <span class="op">=</span> {}</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>geo_bnds[<span class="st">"lon_min"</span>] <span class="op">=</span> <span class="op">-</span><span class="fl">128.0</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>geo_bnds[<span class="st">"lon_max"</span>] <span class="op">=</span> <span class="op">-</span><span class="fl">124.0</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>geo_bnds[<span class="st">"lat_min"</span>] <span class="op">=</span> <span class="fl">42.0</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>geo_bnds[<span class="st">"lat_max"</span>] <span class="op">=</span> <span class="fl">46.0</span></span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Change this code "subsetted_ds = subset_ds(ds, erddap_var, geo_bnds)" to:</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>psi_ds <span class="op">=</span> subset_ds(ds, erddap_var, geo_bnds)</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co"># set workaround flag</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>wa_flag <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Omit create the mask</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a><span class="co"># mask = region.mask(subsetted_ds.longitude, subsetted_ds.latitude)</span></span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a><span class="co"># Omit apply mask the the satellite data</span></span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a><span class="co"># psi_ds = subsetted_ds.where(mask == region.numbers[0])</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

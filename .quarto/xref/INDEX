@@ -19,5 +19,23 @@
   },
   "stats2.qmd": {
     "stats2.html": "06ba2fa0"
+  },
+  "tutorials/Python/raw_calculations/absolute_relative_difference/raw_absolute_relative_difference.ipynb": {
+    "raw_absolute_relative_difference.html": "b93eeb6e"
+  },
+  "tutorials/Python/raw_calculations/trends/raw_trends_primary_productivity.ipynb": {
+    "raw_trends_primary_productivity.html": "0bb428e2"
+  },
+  "tutorials/Python/raw_calculations/unbiased_relative_difference/raw_unbiased_relative_difference.ipynb": {
+    "raw_unbiased_relative_difference.html": "5e5a3ad7"
+  },
+  "tutorials/Python/longhurst/absolute_relative_difference/longhurst_absolute_relative_difference.ipynb": {
+    "longhurst_absolute_relative_difference.html": "714e00d1"
+  },
+  "tutorials/Python/longhurst/unbiased_relative_difference/longhurst_unbiased_relative_difference.ipynb": {
+    "longhurst_unbiased_relative_difference.html": "27c77bbf"
+  },
+  "tutorials/Python/longhurst/contingency_matrix/longhurst_contingency_matrices.ipynb": {
+    "longhurst_contingency_matrices.html": "623a39b4"
   }
 }

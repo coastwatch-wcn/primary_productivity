@@ -1,0 +1,1366 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.31">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+
+<title>Primary Productivity Unbiased Relative Difference Analysis – CoastWatch Primary Productivity Project</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../../">
+<script src="../../../../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../../site_libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../../site_libs/bootstrap/bootstrap-08e1269e8557b430e2197ccc38ae6770.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../../styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a href="../../../../index.html" class="navbar-brand navbar-brand-logo">
+    <img src="../../../../images/NOAA_logo.png" alt="" class="navbar-logo">
+    </a>
+    <a class="navbar-brand" href="../../../../index.html">
+    <span class="navbar-title">CoastWatch Primary Productivity Project</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../algorithm.html"> 
+<span class="menu-text">Algorithm and Data</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../stats2.html"> 
+<span class="menu-text">Statistical Analysis</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../../user_resources.html"> 
+<span class="menu-text">User Resources</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content column-page" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Primary Productivity Unbiased Relative Difference Analysis</h1>
+</div>
+
+
+
+<div class="quarto-title-meta column-page">
+
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="unbiased-relative-difference-analysis-of-the-interim-and-legacy-products" class="level2">
+<h2 class="anchored" data-anchor-id="unbiased-relative-difference-analysis-of-the-interim-and-legacy-products">Unbiased relative difference analysis of the interim and legacy products</h2>
+<blockquote class="blockquote">
+<p>History | Updated Nov 2025</p>
+</blockquote>
+</section>
+<section id="objectives" class="level2">
+<h2 class="anchored" data-anchor-id="objectives">Objectives</h2>
+<p>Calculate the mean unbiased relative difference (ψ<sup>netPP</sup>) of the interim VIIRS netPP (netPP<sub>VIIRS</sub>) and legacy MODIS netPP (netPP<sub>MODIS</sub>) products for each month from the timeseries shared between the two sensors.</p>
+<p>We are using this statistic to track the similarities in netPP values between interim VIIRS and legacy MODIS datasets to provide validation that the interim netPP products can be reliably used for continuity in long-term productivity analyses.</p>
+<p>For <strong>VIIRS-SNPP</strong>, the result will be a <strong>120-month (10-year)</strong> mean monthly timeseries of ψ<sup>netPP</sup>.</p>
+<p>For <strong>VIIRS-NOAA20</strong>, the result will be a <strong>60-month (5-year)</strong> mean monthly timeseries of ψ<sup>netPP</sup>.</p>
+<ul>
+<li><p>ψ<sub>netPP</sub> was calculated as the difference between VIIRS and MODIS netPP values divided by the mean of VIIRS and MODIS.</p></li>
+<li><p>Normalizing by the mean of the two values avoids arbitrarily selecting one product as reference.</p></li>
+</ul>
+</section>
+<section id="satellite-datasets" class="level2">
+<h2 class="anchored" data-anchor-id="satellite-datasets">Satellite Datasets:</h2>
+<section id="unbiased-relative-difference" class="level3">
+<h3 class="anchored" data-anchor-id="unbiased-relative-difference">Unbiased Relative Difference</h3>
+<p>The unbiased relative difference (ψ<sup>netPP</sup>) is calculated, for each pixel as follows:</p>
+<p>$ ^{netPP} = <br>
+$</p>
+<p>Where: * The difference between VIIRS-based netPP (netPP<sub>VIIRS</sub>) and MODIS-based (netPP<sub>MODIS</sub>) netPP values for that pixel is divided by the mean of netPP<sub>VIIRS</sub> and netPP<sub>MODIS</sub>.</p>
+</section>
+<section id="datasets-overview" class="level3">
+<h3 class="anchored" data-anchor-id="datasets-overview">Datasets Overview</h3>
+<p>We will be creating the pixel-by-pixel unbiased relative difference (ψ<sup>netPP</sup>) for the globe for each monthy at a 9km resolution across two datasets, MODIS-Aqua and VIIRS-NOAA-20. Here are the available legacy and interim primary productivity products:</p>
+<ol type="1">
+<li><strong>Primary Productivity, MODIS Aqua, Science Quality, Global, 9km, 2013-2022, (Monthly Composite)</strong></li>
+</ol>
+<ul>
+<li>Distributed via the West Coast Node ERDDAP dataset at the following link: &gt; https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/productivity_modis_aqua_monthly_9km.graph</li>
+</ul>
+<ol start="2" type="1">
+<li><strong>Primary Productivity, VIIRS SNPP, Science Quality, Global, 9km, 2013-2022 (Monthly Composite)</strong></li>
+</ol>
+<ul>
+<li>Distributed via the West Coast Node ERDDAP dataset at the following link: &gt; https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/productivity_viirs_snpp_monthly_9km.graph</li>
+</ul>
+<ol start="3" type="1">
+<li><strong>Primary Productivity, VIIRS NOAA20, Science Quality, Global, 9km, 2018-2022, (Monthly Composite)</strong></li>
+</ol>
+<ul>
+<li>Distributed via the West Coast Node ERDDAP dataset at the following link: &gt; https://coastwatch.pfeg.noaa.gov/wcn/erddap/griddap/productivity_viirs_noaa20_monthly_9km.graph</li>
+</ul>
+</section>
+<section id="tutorial-for-this-notebook" class="level3">
+<h3 class="anchored" data-anchor-id="tutorial-for-this-notebook">Tutorial for this notebook</h3>
+<p>The VIIRS-NOAA20 and MODIS-Aqua netPP datasets will be used in this notebook to generate a timeseries of monthly mean values of ψ<sup>netPP</sup>. We will access the data using the xr_open_ds() function below. The function requires:<br>
+* The url of the ERDDAP server being use, in this case: https://coastwatch.pfeg.noaa.gov/wcn/erddap</p>
+<ul>
+<li>The ID of the datasets, in this case <strong>productivity_viirs_noaa20_monthly_9km</strong> and <strong>productivity_modis_aqua_monthly_9km</strong>.</li>
+</ul>
+</section>
+<section id="resource-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="resource-requirements">Resource requirements</h3>
+<ul>
+<li><p><strong>Jupyter Notebook</strong></p></li>
+<li><p><strong>Python 3</strong> with the modules included within the <em>Import packages</em> section below</p></li>
+<li><p><strong>The CDL file</strong> located in the relative folder on GitHub.</p>
+<ul>
+<li><p>The name of the file is <code>psi_nasa_9k_mr_dr.cdl</code>.</p></li>
+<li><p>The cdl file has latitude and longitude that have been gridded to the 9km NOAA CoastWatch standard ocean color grid.</p></li>
+<li><p>The template file is populated with the latitude and longitude data and then renamed.</p></li>
+</ul></li>
+<li><p><strong>Internet connection</strong></p></li>
+</ul>
+</section>
+</section>
+<section id="import-packages" class="level2">
+<h2 class="anchored" data-anchor-id="import-packages">Import Packages</h2>
+<div id="cell-5" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> subprocess</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> timezone, datetime</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy.ma <span class="im">as</span> ma</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.dates <span class="im">as</span> mdates</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> netCDF4 <span class="im">import</span> Dataset</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> netCDF4</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># added necessary packages</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dateutil <span class="im">import</span> rrule</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> dateutil.parser <span class="im">import</span> parse</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xarray <span class="im">as</span> xr</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="create-global-variables" class="level2">
+<h2 class="anchored" data-anchor-id="create-global-variables">Create global variables</h2>
+<p>Global variables are used to set up the file structure, directory paths, and template files required for processing trends.</p>
+<ul>
+<li><strong>BASE_DIR</strong> is the base directory defined for the project, and the root for all other subdirectories.</li>
+<li><strong>ODATA_DIR</strong> is where the output trends file will be located.</li>
+<li><strong>WORK_DIR</strong> is where the temporary files used during data processing are located.</li>
+<li><strong>RESOURCES_DIR</strong> is where the CDL file will be located.</li>
+</ul>
+<div id="cell-7" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ROOT_DIR <span class="op">=</span> <span class="st">"/Users/madisonrichardson/netpp"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ODATA_DIR <span class="op">=</span> os.path.join(ROOT_DIR, <span class="st">"data/matrix/psi"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>WORK_DIR <span class="op">=</span> os.path.join(ROOT_DIR, <span class="st">"work"</span>)</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>RESOURCES_DIR <span class="op">=</span> os.path.join(ROOT_DIR, <span class="st">"resources"</span>)</span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>DIR_LIST <span class="op">=</span> [ROOT_DIR,</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>            WORK_DIR,</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>            ODATA_DIR,</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>            RESOURCES_DIR]</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> dr <span class="kw">in</span> DIR_LIST:</span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    os.makedirs(dr, exist_ok<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="bu">len</span>(DIR_LIST), <span class="st">'directories validated'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>4 directories validated</code></pre>
+</div>
+</div>
+</section>
+<section id="make-some-useful-functions" class="level2">
+<h2 class="anchored" data-anchor-id="make-some-useful-functions">Make Some Useful Functions</h2>
+<div id="cell-9" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> xr_open_ds(</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    e_id, e_source<span class="op">=</span><span class="st">"https://coastwatch.pfeg.noaa.gov/wcn/erddap"</span>, dap<span class="op">=</span><span class="st">"griddap"</span></span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>):</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Open a remote ERDDAP dataset as an Xarray dataset.</span></span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a><span class="co">    Constructs the ERDDAP dataset URL using the provided dataset ID ('e_id'),</span></span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a><span class="co">    server URL ('e_source'), and data access protocol ('dap'). Then it uses Xarray</span></span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a><span class="co">    to open the dataset from the remote source.</span></span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a><span class="co">        e_id (str): ERDDAP dataset ID.</span></span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a><span class="co">        e_source (str, optional): URL to ERDDAP server. Defaults to 'https://coastwatch.pfeg.noaa.gov/wcn/erddap'.</span></span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a><span class="co">            You can change it to any ERDDAP server.</span></span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a><span class="co">        dap (str, optional): The data access protocol type. Defaults to 'griddap' which is used for</span></span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a><span class="co">        accessing gridded datasets.</span></span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a><span class="co">        array: Xarray dataset object</span></span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    <span class="co"># remove any trailing /</span></span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    e_source <span class="op">=</span> e_source.rstrip(<span class="st">"/"</span>)</span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>    erddap_url <span class="op">=</span> <span class="st">"/"</span>.join([e_source, dap, e_id])</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> xr.open_dataset(erddap_url)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-10" class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> ensure_time_centered_on_16th(ds):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Ensure that all time values in an xarray Dataset are centered on the 16th of each month.</span></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="co">    If not, replace the time values with ones that are centered.</span></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="co">        ds (xarray.Dataset): The input dataset with a 'time' coordinate.</span></span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co">        xarray.Dataset: A dataset with time values centered on the 16th.</span></span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    time_values <span class="op">=</span> pd.to_datetime(ds.time.values)</span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>    days <span class="op">=</span> time_values.day</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">all</span>(day <span class="op">==</span> <span class="dv">16</span> <span class="cf">for</span> day <span class="kw">in</span> days):</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Time values are already centered on the 16th."</span>)</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> ds</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="st">"Time values are not centered. Replacing day with 16..."</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>        centered_time <span class="op">=</span> time_values.<span class="bu">map</span>(<span class="kw">lambda</span> x: x.replace(day<span class="op">=</span><span class="dv">16</span>))</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>        ds <span class="op">=</span> ds.copy()</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>        ds[<span class="st">'time'</span>] <span class="op">=</span> centered_time</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> ds</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-11" class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> calculate_psi_dr(minuend_data, subtrahend_data):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Calculate the unbiased relative difference (psi) between the two</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">    datasets.</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a><span class="co">    Nerd Notation</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a><span class="co">    minuend is math-speak for the value substracted from.</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a><span class="co">    subtrahend is math-speak for the value that is substracted.</span></span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a><span class="co">        minuend_data (ma.MaskedArray): The dataset where values will be</span></span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a><span class="co">                                    subtracted.</span></span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a><span class="co">        subtrahend_data (ma.MaskedArray): The dataset that will be subtracted</span></span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a><span class="co">                                        from 'minuend_data'.</span></span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a><span class="co">        ma.MaskedArray: The array of unbiased relative difference (psi) values</span></span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a><span class="co">                        where missing data remains masked.</span></span>
+<span id="cb6-20"><a href="#cb6-20" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb6-21"><a href="#cb6-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-22"><a href="#cb6-22" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate the average of input datasets</span></span>
+<span id="cb6-23"><a href="#cb6-23" aria-hidden="true" tabindex="-1"></a>    avg <span class="op">=</span> ma.divide(ma.add(minuend_data, subtrahend_data), <span class="dv">2</span>)</span>
+<span id="cb6-24"><a href="#cb6-24" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-25"><a href="#cb6-25" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Calculate unbiased relative difference (psi)</span></span>
+<span id="cb6-26"><a href="#cb6-26" aria-hidden="true" tabindex="-1"></a>    psi_values <span class="op">=</span> ma.divide(ma.subtract(minuend_data, subtrahend_data), avg)</span>
+<span id="cb6-27"><a href="#cb6-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> psi_values</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-12" class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_monthly_psi_timeseries(dates, psi_mean, ymin<span class="op">=-</span><span class="fl">0.1</span>, ymax<span class="op">=</span><span class="fl">0.1</span>):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Plot the monthly mean relative difference time series.</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co">        dates (pd.DatetimeIndex): Dates centered on the 16th of each month.</span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co">        psi_mean (xarray.DataArray or 1D array): Monthly mean psi netPP values.</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a><span class="co">        ymin (float): Lower y-axis limit.</span></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a><span class="co">        ymax (float): Upper y-axis limit.</span></span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">20</span>, <span class="dv">6</span>))</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a>    plt.plot(dates, psi_mean, <span class="st">'b--'</span>, label<span class="op">=</span><span class="vs">r'</span><span class="dv">$\b</span><span class="vs">ar{</span><span class="er">\</span><span class="vs">psi}_{month}</span><span class="dv">$</span><span class="vs">'</span>)</span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a>    plt.axhline(<span class="dv">0</span>, color<span class="op">=</span><span class="st">'black'</span>, linewidth<span class="op">=</span><span class="fl">0.5</span>)</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a>    plt.axhline(<span class="fl">0.05</span>, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">':'</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a>    plt.axhline(<span class="op">-</span><span class="fl">0.05</span>, color<span class="op">=</span><span class="st">'red'</span>, linestyle<span class="op">=</span><span class="st">':'</span>, linewidth<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a>    plt.ylim(ymin, ymax)</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>    plt.title(<span class="vs">r'</span><span class="dv">$\b</span><span class="vs">ar{</span><span class="er">\</span><span class="vs">psi}_{month}</span><span class="dv">$</span><span class="vs"> Timeseries: Unbiased Relative Difference'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb7-19"><a href="#cb7-19" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">'Unbiased Relative Difference (%)'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb7-20"><a href="#cb7-20" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">'Time'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb7-21"><a href="#cb7-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-22"><a href="#cb7-22" aria-hidden="true" tabindex="-1"></a>    plt.gca().xaxis.set_major_locator(mdates.MonthLocator())</span>
+<span id="cb7-23"><a href="#cb7-23" aria-hidden="true" tabindex="-1"></a>    plt.gca().xaxis.set_major_formatter(mdates.DateFormatter(<span class="st">'%Y-%m'</span>))</span>
+<span id="cb7-24"><a href="#cb7-24" aria-hidden="true" tabindex="-1"></a>    plt.gcf().autofmt_xdate()</span>
+<span id="cb7-25"><a href="#cb7-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-26"><a href="#cb7-26" aria-hidden="true" tabindex="-1"></a>    plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb7-27"><a href="#cb7-27" aria-hidden="true" tabindex="-1"></a>    plt.legend()</span>
+<span id="cb7-28"><a href="#cb7-28" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-13" class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> plot_spatial_psi_mean(my_date, ds, da, title<span class="op">=</span><span class="va">None</span>, vmin<span class="op">=-</span><span class="fl">0.25</span>, vmax<span class="op">=</span><span class="fl">0.25</span>):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Plot the spatial mean ΔnetPP across time.</span></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a><span class="co">        ds (xarray.Dataset): Dataset containing coordinates (longitude, latitude).</span></span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a><span class="co">        da (xarray.DataArray): psi netPP data array with dimensions (time, lat, lon).</span></span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a><span class="co">        title (str): Optional plot title.</span></span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a><span class="co">        vmin (float): Minimum value for color scale.</span></span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a><span class="co">        vmax (float): Maximum value for color scale.</span></span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a>    <span class="co"># Assign the centered time back to the dataset</span></span>
+<span id="cb8-14"><a href="#cb8-14" aria-hidden="true" tabindex="-1"></a>    da[<span class="st">'time'</span>] <span class="op">=</span> my_date</span>
+<span id="cb8-15"><a href="#cb8-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-16"><a href="#cb8-16" aria-hidden="true" tabindex="-1"></a>    psi_mean <span class="op">=</span> da.mean(dim<span class="op">=</span><span class="st">"time"</span>, skipna<span class="op">=</span><span class="va">True</span>).values</span>
+<span id="cb8-17"><a href="#cb8-17" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-18"><a href="#cb8-18" aria-hidden="true" tabindex="-1"></a>    plt.figure(figsize<span class="op">=</span>(<span class="dv">10</span>, <span class="dv">6</span>))</span>
+<span id="cb8-19"><a href="#cb8-19" aria-hidden="true" tabindex="-1"></a>    plt.pcolormesh(ds.longitude, ds.latitude, psi_mean, cmap<span class="op">=</span><span class="st">'coolwarm'</span>, vmin<span class="op">=</span>vmin, vmax<span class="op">=</span>vmax)</span>
+<span id="cb8-20"><a href="#cb8-20" aria-hidden="true" tabindex="-1"></a>    cbar <span class="op">=</span> plt.colorbar()</span>
+<span id="cb8-21"><a href="#cb8-21" aria-hidden="true" tabindex="-1"></a>    cbar.set_label(<span class="vs">r'</span><span class="dv">$\b</span><span class="vs">ar{</span><span class="er">\</span><span class="vs">psi}_{lat/lon}</span><span class="dv">$</span><span class="vs"> </span><span class="kw">(</span><span class="vs">percent</span><span class="kw">)</span><span class="vs">'</span>)</span>
+<span id="cb8-22"><a href="#cb8-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-23"><a href="#cb8-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> title:</span>
+<span id="cb8-24"><a href="#cb8-24" aria-hidden="true" tabindex="-1"></a>        plt.title(title, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb8-25"><a href="#cb8-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb8-26"><a href="#cb8-26" aria-hidden="true" tabindex="-1"></a>        plt.title(<span class="vs">r'</span><span class="dv">$\b</span><span class="vs">ar{</span><span class="er">\</span><span class="vs">psi}_{lat/lon}</span><span class="dv">$</span><span class="vs"> Spatial Variability'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb8-27"><a href="#cb8-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-28"><a href="#cb8-28" aria-hidden="true" tabindex="-1"></a>    plt.xlabel(<span class="st">'Longitude'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb8-29"><a href="#cb8-29" aria-hidden="true" tabindex="-1"></a>    plt.ylabel(<span class="st">'Latitude'</span>, fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb8-30"><a href="#cb8-30" aria-hidden="true" tabindex="-1"></a>    plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb8-31"><a href="#cb8-31" aria-hidden="true" tabindex="-1"></a>    plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="set-up-parameters" class="level2">
+<h2 class="anchored" data-anchor-id="set-up-parameters">Set Up Parameters</h2>
+<p>Initialize the parameters required for the absolute relative difference calculation:</p>
+<ul>
+<li><p><strong>start_date</strong> and <strong>end_date</strong>: Define the date range for the analysis (format: YYYY-MM-DD). Monthly composites are centered on the 16th of each month.</p></li>
+<li><p><strong>sensor1</strong> and <strong>sensor2</strong>: Specify the two satellite sensors for absolute relative difference analysis (‘modis’, ‘snpp’, or ‘noaa20’) (we are using ‘modis’ and ‘noaa20’).</p></li>
+<li><p><strong>ncvar</strong>: The name of the variable being analyzed (we are using ‘productivity’)</p></li>
+<li><p><strong>overwrite</strong>: If ‘True’, exisiting output files will be replaced.</p></li>
+</ul>
+<div id="cell-15" class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>start_date <span class="op">=</span> <span class="st">"2018-01-16"</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>end_date <span class="op">=</span> <span class="st">"2022-12-16"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Define sensor (either "snpp" or "noaa20" or "modis")</span></span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>sensor1 <span class="op">=</span> <span class="st">"modis"</span></span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>sensor2 <span class="op">=</span> <span class="st">"noaa20"</span></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Valid sensors list</span></span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>valid_sensors <span class="op">=</span> {<span class="st">"modis"</span>, <span class="st">"snpp"</span>, <span class="st">"noaa20"</span>}</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Check both sensors are valid</span></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> s <span class="kw">in</span> (sensor1, sensor2):</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> s <span class="kw">not</span> <span class="kw">in</span> valid_sensors:</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        <span class="cf">raise</span> <span class="pp">ValueError</span>(<span class="ss">f"The sensor '</span><span class="sc">{</span>s<span class="sc">}</span><span class="ss">' is not a valid option. Choose from: </span><span class="sc">{</span>valid_sensors<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>ncvar <span class="op">=</span> <span class="st">'productivity'</span></span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>overwrite <span class="op">=</span> <span class="va">True</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="prepare-output-file" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-output-file">Prepare Output File</h2>
+<p>Define file naming conventions for the output file.</p>
+<ul>
+<li><p><strong>nc_filename</strong>: Output file name (psi results).</p></li>
+<li><p>Skips processing if the output file already exists and ‘overwrite’ is ‘False’.</p></li>
+</ul>
+<div id="cell-17" class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Define the final output file path</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>nc_filename <span class="op">=</span> <span class="ss">f'netpp_psi_</span><span class="sc">{</span>sensor1<span class="sc">}</span><span class="ss">_</span><span class="sc">{</span>sensor2<span class="sc">}</span><span class="ss">.nc'</span></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>nc_file_path <span class="op">=</span> os.path.join(ODATA_DIR, nc_filename)</span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Add logic to not overwrite existing files</span></span>
+<span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span> os.path.isfile(nc_file_path):</span>
+<span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="kw">not</span> overwrite:</span>
+<span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>nc_filename<span class="sc">}</span><span class="ss"> already exists for </span><span class="sc">{</span>sensor1<span class="sc">}</span><span class="ss"> and </span><span class="sc">{</span>sensor2<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f'Overwriting </span><span class="sc">{</span>nc_filename<span class="sc">}</span><span class="ss"> for </span><span class="sc">{</span>sensor1<span class="sc">}</span><span class="ss"> and </span><span class="sc">{</span>sensor2<span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="prepare-and-run-ncgen-command" class="level2">
+<h2 class="anchored" data-anchor-id="prepare-and-run-ncgen-command">Prepare and Run ncgen Command</h2>
+<p>Generate an initial NetCDF file using the ‘ncgen’ tool and a CDL template.</p>
+<ul>
+<li><p>Creates filenames for the output NetCDF (‘ncgen_ofile_nc’) and CDL input (‘ncgen_ifile_cdl’).</p></li>
+<li><p>Constructs a shell command for ‘ncegn’ to convert the CDL file into a NetCDF file.</p></li>
+<li><p>Executes the command using ‘subprocess.call’ and checks for errors.</p></li>
+</ul>
+<div id="cell-19" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Prepare ncgen input and output filenames</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a>now <span class="op">=</span> datetime.now()</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>ncgen_ofile_nc <span class="op">=</span> <span class="ss">f"ncgen_trend_ofile</span><span class="sc">{</span>now<span class="sc">:</span><span class="op">%</span>Y<span class="op">%</span>m<span class="op">%</span>d<span class="op">%</span>H<span class="op">%</span>M<span class="op">%</span>S<span class="sc">}</span><span class="ss">.nc"</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Create temporary file to accept output data from a .cdl file</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>ncgen_ifile_cdl <span class="op">=</span> <span class="st">'psi_nasa_9k_mr_dr.cdl'</span></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Run ncgen command</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>myCmd1 <span class="op">=</span> <span class="st">" "</span>.join(</span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    [</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        <span class="st">"ncgen"</span>,</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>        <span class="st">"-o"</span>,</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>        os.path.join(WORK_DIR, ncgen_ofile_nc),</span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>        os.path.join(RESOURCES_DIR, ncgen_ifile_cdl),</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(myCmd1)</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"ncgen"</span>, subprocess.call(myCmd1, shell<span class="op">=</span><span class="va">True</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>ncgen -o /Users/madisonrichardson/netpp/work/ncgen_trend_ofile20251120094351.nc /Users/madisonrichardson/netpp/resources/psi_nasa_9k_mr_dr.cdl
+ncgen 0</code></pre>
+</div>
+</div>
+</section>
+<section id="fetching-satellite-datasets-from-erddap" class="level2">
+<h2 class="anchored" data-anchor-id="fetching-satellite-datasets-from-erddap">Fetching Satellite Datasets from ERDDAP</h2>
+<p>Using the <strong>xr_open_ds</strong> function we defined above, we will be retrieving the MODIS, SNPP, or NOAA20 data from ERDDAP.</p>
+<p>Set the base URL and dataset IDs for accessing MODIS, SNPP, or NOAA20 primary productivity data from an ERDDAP server.</p>
+<p>It is optional to specify a variable, but in this case we are specifying the variable <strong>productivity</strong> which we define earlier as <strong>ncvar</strong>.</p>
+<div id="cell-21" class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the url of the ERDDAP server</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>erddap_url <span class="op">=</span> <span class="st">"https://coastwatch.pfeg.noaa.gov/wcn/erddap"</span></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the ERDDAP dataset ID for each sensor</span></span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>erddap_id1 <span class="op">=</span> <span class="ss">f"productivity_modis_aqua_monthly_9km"</span></span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>erddap_id2 <span class="op">=</span> <span class="ss">f"productivity_viirs_</span><span class="sc">{</span>sensor2<span class="sc">}</span><span class="ss">_monthly_9km"</span></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sensor 1: </span><span class="sc">{</span>sensor1<span class="sc">.</span>upper()<span class="sc">}</span><span class="ss">, Dataset ID: </span><span class="sc">{</span>erddap_id1<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Sensor 2: </span><span class="sc">{</span>sensor2<span class="sc">.</span>upper()<span class="sc">}</span><span class="ss">, Dataset ID: </span><span class="sc">{</span>erddap_id2<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>ds1 <span class="op">=</span> xr_open_ds(erddap_id1, e_source<span class="op">=</span>erddap_url)</span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>sensor1<span class="sc">.</span>upper()<span class="sc">}</span><span class="ss"> dataset: </span><span class="sc">{</span>ds1<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>ds2 <span class="op">=</span> xr_open_ds(erddap_id2, e_source<span class="op">=</span>erddap_url)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>sensor2<span class="sc">.</span>upper()<span class="sc">}</span><span class="ss"> dataset: </span><span class="sc">{</span>ds2<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Sensor 1: MODIS, Dataset ID: productivity_modis_aqua_monthly_9km
+Sensor 2: NOAA20, Dataset ID: productivity_viirs_noaa20_monthly_9km
+MODIS dataset: &lt;xarray.Dataset&gt; Size: 4GB
+Dimensions:       (time: 120, latitude: 2160, longitude: 4320)
+Coordinates:
+  * time          (time) datetime64[ns] 960B 2013-01-16T08:00:00 ... 2022-12-...
+  * latitude      (latitude) float64 17kB 89.96 89.88 89.79 ... -89.88 -89.96
+  * longitude     (longitude) float64 35kB -180.0 -179.9 -179.8 ... 179.9 180.0
+Data variables:
+    productivity  (time, latitude, longitude) float32 4GB ...
+Attributes: (12/55)
+    acknowledgement:           Support provided by NOAA CoastWatch and CSU COAST
+    cdm_data_type:             Grid
+    contributor:               Dale Robinson, Jesse Espinoza, Isaac Schroeder
+    contributor_role:          project management, development, production
+    Conventions:               CF-1.10, ACDD-1.3, COARDS
+    creator_name:              NOAA CoastWatch West Coast Node
+    ...                        ...
+    time_coverage_end:         2022-12-16T08:00:00Z
+    time_coverage_resolution:  PD1
+    time_coverage_start:       2013-01-16T08:00:00Z
+    title:                     Primary Productivity, MODIS Aqua, Science Qual...
+    Westernmost_Easting:       -179.9583
+    westernmost_longitude:     -180.0
+NOAA20 dataset: &lt;xarray.Dataset&gt; Size: 2GB
+Dimensions:       (time: 60, latitude: 2160, longitude: 4320)
+Coordinates:
+  * time          (time) datetime64[ns] 480B 2018-01-16T12:00:00 ... 2022-12-...
+  * latitude      (latitude) float32 9kB 89.96 89.88 89.79 ... -89.88 -89.96
+  * longitude     (longitude) float32 17kB -180.0 -179.9 -179.8 ... 179.9 180.0
+Data variables:
+    productivity  (time, latitude, longitude) float32 2GB ...
+Attributes: (12/48)
+    acknowledgement:           This project was funding by a grant from the N...
+    cdm_data_type:             Grid
+    Conventions:               CF-1.10, ACDD-1.3, COARDS
+    creator_email:             coastwatch.info@noaa.gov
+    creator_name:              NOAA/STAR/NESDIS/CoastWatch/West Coast Node
+    creator_type:              institution
+    ...                        ...
+    testOutOfDate:             now-116days
+    time_coverage_end:         2022-12-16T12:00:00Z
+    time_coverage_resolution:  P1D
+    time_coverage_start:       2018-01-16T12:00:00Z
+    title:                     Primary Productivity, VIIRS NOAA20, Science Qu...
+    Westernmost_Easting:       -179.9583</code></pre>
+</div>
+</div>
+<section id="subset-the-dataset-to-include-only-the-start-and-end-dates" class="level3">
+<h3 class="anchored" data-anchor-id="subset-the-dataset-to-include-only-the-start-and-end-dates">Subset the dataset to include only the start and end dates</h3>
+<div id="cell-23" class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a>da1 <span class="op">=</span> ds1.sel(time<span class="op">=</span><span class="bu">slice</span>(start_date, end_date))</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>sensor1<span class="sc">.</span>upper()<span class="sc">}</span><span class="ss"> dataset: </span><span class="sc">{</span>da1<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>da2 <span class="op">=</span> ds2.sel(time<span class="op">=</span><span class="bu">slice</span>(start_date, end_date))</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"</span><span class="sc">{</span>sensor1<span class="sc">.</span>upper()<span class="sc">}</span><span class="ss"> dataset: </span><span class="sc">{</span>da2<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>MODIS dataset: &lt;xarray.Dataset&gt; Size: 2GB
+Dimensions:       (time: 60, latitude: 2160, longitude: 4320)
+Coordinates:
+  * time          (time) datetime64[ns] 480B 2018-01-16T08:00:00 ... 2022-12-...
+  * latitude      (latitude) float64 17kB 89.96 89.88 89.79 ... -89.88 -89.96
+  * longitude     (longitude) float64 35kB -180.0 -179.9 -179.8 ... 179.9 180.0
+Data variables:
+    productivity  (time, latitude, longitude) float32 2GB ...
+Attributes: (12/55)
+    acknowledgement:           Support provided by NOAA CoastWatch and CSU COAST
+    cdm_data_type:             Grid
+    contributor:               Dale Robinson, Jesse Espinoza, Isaac Schroeder
+    contributor_role:          project management, development, production
+    Conventions:               CF-1.10, ACDD-1.3, COARDS
+    creator_name:              NOAA CoastWatch West Coast Node
+    ...                        ...
+    time_coverage_end:         2022-12-16T08:00:00Z
+    time_coverage_resolution:  PD1
+    time_coverage_start:       2013-01-16T08:00:00Z
+    title:                     Primary Productivity, MODIS Aqua, Science Qual...
+    Westernmost_Easting:       -179.9583
+    westernmost_longitude:     -180.0
+MODIS dataset: &lt;xarray.Dataset&gt; Size: 2GB
+Dimensions:       (time: 60, latitude: 2160, longitude: 4320)
+Coordinates:
+  * time          (time) datetime64[ns] 480B 2018-01-16T12:00:00 ... 2022-12-...
+  * latitude      (latitude) float32 9kB 89.96 89.88 89.79 ... -89.88 -89.96
+  * longitude     (longitude) float32 17kB -180.0 -179.9 -179.8 ... 179.9 180.0
+Data variables:
+    productivity  (time, latitude, longitude) float32 2GB ...
+Attributes: (12/48)
+    acknowledgement:           This project was funding by a grant from the N...
+    cdm_data_type:             Grid
+    Conventions:               CF-1.10, ACDD-1.3, COARDS
+    creator_email:             coastwatch.info@noaa.gov
+    creator_name:              NOAA/STAR/NESDIS/CoastWatch/West Coast Node
+    creator_type:              institution
+    ...                        ...
+    testOutOfDate:             now-116days
+    time_coverage_end:         2022-12-16T12:00:00Z
+    time_coverage_resolution:  P1D
+    time_coverage_start:       2018-01-16T12:00:00Z
+    title:                     Primary Productivity, VIIRS NOAA20, Science Qu...
+    Westernmost_Easting:       -179.9583</code></pre>
+</div>
+</div>
+</section>
+</section>
+<section id="calculate-monthly-psi" class="level2">
+<h2 class="anchored" data-anchor-id="calculate-monthly-psi">Calculate Monthly Psi</h2>
+<ul>
+<li><p>Extract productivity values from MODIS and NOAA20 datasets.</p></li>
+<li><p>Convert the time coordinates to datetime objects and normalize them to remove hour/minute differences.</p></li>
+<li><p>Identify common dates that appear in both datasets.</p></li>
+<li><p>Loop over months, compute the absolute relative difference, and save the result as a tuple of (timestamp, delta array) to prepare the full time series of mean ψ values to write into the NetCDF output file.</p></li>
+</ul>
+<div id="cell-25" class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract productivity variable from each dataset</span></span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>modis_data <span class="op">=</span> da1[ncvar]</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>viirs_data <span class="op">=</span> da2[ncvar]</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Extract datetime values</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>viirs_time <span class="op">=</span> pd.to_datetime(viirs_data.time.values)</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>modis_time <span class="op">=</span> pd.to_datetime(modis_data.time.values)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Normalize to date only, but keep map to original datetime</span></span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>viirs_date_map <span class="op">=</span> {t.normalize(): t <span class="cf">for</span> t <span class="kw">in</span> viirs_time}</span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a>modis_date_map <span class="op">=</span> {t.normalize(): t <span class="cf">for</span> t <span class="kw">in</span> modis_time}</span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a><span class="co"># Find common normalized dates</span></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>common_dates <span class="op">=</span> <span class="bu">sorted</span>(<span class="bu">set</span>(viirs_date_map.keys()) <span class="op">&amp;</span> <span class="bu">set</span>(modis_date_map.keys()))</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="ss">f"Found </span><span class="sc">{</span><span class="bu">len</span>(common_dates)<span class="sc">}</span><span class="ss"> matching dates (should be 60)"</span>)</span>
+<span id="cb17-16"><a href="#cb17-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-17"><a href="#cb17-17" aria-hidden="true" tabindex="-1"></a><span class="co"># Loop and calculate delta</span></span>
+<span id="cb17-18"><a href="#cb17-18" aria-hidden="true" tabindex="-1"></a>psi_results <span class="op">=</span> []</span>
+<span id="cb17-19"><a href="#cb17-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-20"><a href="#cb17-20" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> date <span class="kw">in</span> common_dates:</span>
+<span id="cb17-21"><a href="#cb17-21" aria-hidden="true" tabindex="-1"></a>    t_viirs <span class="op">=</span> viirs_date_map[date]</span>
+<span id="cb17-22"><a href="#cb17-22" aria-hidden="true" tabindex="-1"></a>    t_modis <span class="op">=</span> modis_date_map[date]</span>
+<span id="cb17-23"><a href="#cb17-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-24"><a href="#cb17-24" aria-hidden="true" tabindex="-1"></a>    <span class="cf">try</span>:</span>
+<span id="cb17-25"><a href="#cb17-25" aria-hidden="true" tabindex="-1"></a>        viirs_slice <span class="op">=</span> viirs_data.sel(time<span class="op">=</span>t_viirs)</span>
+<span id="cb17-26"><a href="#cb17-26" aria-hidden="true" tabindex="-1"></a>        modis_slice <span class="op">=</span> modis_data.sel(time<span class="op">=</span>t_modis)</span>
+<span id="cb17-27"><a href="#cb17-27" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-28"><a href="#cb17-28" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> viirs_slice.shape <span class="op">!=</span> modis_slice.shape:</span>
+<span id="cb17-29"><a href="#cb17-29" aria-hidden="true" tabindex="-1"></a>            <span class="bu">print</span>(<span class="ss">f"Shape mismatch at </span><span class="sc">{</span>date<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>viirs_slice<span class="sc">.</span>shape<span class="sc">}</span><span class="ss"> vs </span><span class="sc">{</span>modis_slice<span class="sc">.</span>shape<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-30"><a href="#cb17-30" aria-hidden="true" tabindex="-1"></a>            <span class="cf">continue</span></span>
+<span id="cb17-31"><a href="#cb17-31" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-32"><a href="#cb17-32" aria-hidden="true" tabindex="-1"></a>        psi <span class="op">=</span> calculate_psi_dr(viirs_slice.values, modis_slice.values)</span>
+<span id="cb17-33"><a href="#cb17-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-34"><a href="#cb17-34" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Timestamp on the 16th of the month, 00:00 UTC</span></span>
+<span id="cb17-35"><a href="#cb17-35" aria-hidden="true" tabindex="-1"></a>        utc_timestamp <span class="op">=</span> pd.Timestamp(date).replace(tzinfo<span class="op">=</span>timezone.utc).timestamp()</span>
+<span id="cb17-36"><a href="#cb17-36" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-37"><a href="#cb17-37" aria-hidden="true" tabindex="-1"></a>        psi_results.append((utc_timestamp, psi))</span>
+<span id="cb17-38"><a href="#cb17-38" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Appended psi for </span><span class="sc">{</span>date<span class="sc">.</span>strftime(<span class="st">'%Y-%m-</span><span class="sc">%d</span><span class="st">'</span>)<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb17-39"><a href="#cb17-39" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-40"><a href="#cb17-40" aria-hidden="true" tabindex="-1"></a>    <span class="cf">except</span> <span class="pp">Exception</span> <span class="im">as</span> e:</span>
+<span id="cb17-41"><a href="#cb17-41" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Error processing </span><span class="sc">{</span>date<span class="sc">}</span><span class="ss">: </span><span class="sc">{</span>e<span class="sc">}</span><span class="ss">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Found 60 matching dates (should be 60)
+Appended psi for 2018-01-16
+Appended psi for 2018-02-16
+Appended psi for 2018-03-16
+Appended psi for 2018-04-16
+Appended psi for 2018-05-16
+Appended psi for 2018-06-16
+Appended psi for 2018-07-16
+Appended psi for 2018-08-16
+Appended psi for 2018-09-16
+Appended psi for 2018-10-16
+Appended psi for 2018-11-16
+Appended psi for 2018-12-16
+Appended psi for 2019-01-16
+Appended psi for 2019-02-16
+Appended psi for 2019-03-16
+Appended psi for 2019-04-16
+Appended psi for 2019-05-16
+Appended psi for 2019-06-16
+Appended psi for 2019-07-16
+Appended psi for 2019-08-16
+Appended psi for 2019-09-16
+Appended psi for 2019-10-16
+Appended psi for 2019-11-16
+Appended psi for 2019-12-16
+Appended psi for 2020-01-16
+Appended psi for 2020-02-16
+Appended psi for 2020-03-16
+Appended psi for 2020-04-16
+Appended psi for 2020-05-16
+Appended psi for 2020-06-16
+Appended psi for 2020-07-16
+Appended psi for 2020-08-16
+Appended psi for 2020-09-16
+Appended psi for 2020-10-16
+Appended psi for 2020-11-16
+Appended psi for 2020-12-16
+Appended psi for 2021-01-16
+Appended psi for 2021-02-16
+Appended psi for 2021-03-16
+Appended psi for 2021-04-16
+Appended psi for 2021-05-16
+Appended psi for 2021-06-16
+Appended psi for 2021-07-16
+Appended psi for 2021-08-16
+Appended psi for 2021-09-16
+Appended psi for 2021-10-16
+Appended psi for 2021-11-16
+Appended psi for 2021-12-16
+Appended psi for 2022-01-16
+Appended psi for 2022-02-16
+Appended psi for 2022-03-16
+Appended psi for 2022-04-16
+Appended psi for 2022-05-16
+Appended psi for 2022-06-16
+Appended psi for 2022-07-16
+Appended psi for 2022-08-16
+Appended psi for 2022-09-16
+Appended psi for 2022-10-16
+Appended psi for 2022-11-16
+Appended psi for 2022-12-16</code></pre>
+</div>
+</div>
+</section>
+<section id="save-results-to-a-netcdf-file" class="level2">
+<h2 class="anchored" data-anchor-id="save-results-to-a-netcdf-file">Save Results to a NetCDF file</h2>
+<p>With time and psi data to a NetCDF file.</p>
+<ul>
+<li><p>Open the temporary NetCDF file created by ‘ncgen’ in append mode.</p></li>
+<li><p>Update the metadata to describe the dataset.</p></li>
+<li><p>Write each timestampe (in UTC) and the corresponding 2D psi array into the file.</p></li>
+<li><p>Use ‘nccopy’ for compression and save the final output file.</p></li>
+<li><p>Delete the temporary file to clean up.</p></li>
+</ul>
+<div id="cell-27" class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Open temporary file and load data into it</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> netCDF4.Dataset(os.path.join(WORK_DIR,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>                                    ncgen_ofile_nc</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>                                    ), <span class="st">"a"</span>) <span class="im">as</span> nc:</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> time_index, (t, psi) <span class="kw">in</span> <span class="bu">enumerate</span>(psi_results):</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>         <span class="co"># Make sure t is a datetime and add UTC tzinfo if missing</span></span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(t, <span class="bu">float</span>):  <span class="co"># already a timestamp</span></span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>            utc_timestamp <span class="op">=</span> t</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> t.tzinfo <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>                t <span class="op">=</span> t.replace(tzinfo<span class="op">=</span>timezone.utc)</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>            utc_timestamp <span class="op">=</span> t.timestamp()</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>        nc[<span class="st">'time'</span>][time_index] <span class="op">=</span> utc_timestamp</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>        nc[<span class="st">'psi'</span>][time_index, :, :] <span class="op">=</span> psi</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>        nc.sync()</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">print</span>(<span class="ss">f"Wrote time index </span><span class="sc">{</span>time_index<span class="sc">}</span><span class="ss">"</span>)</span>
+<span id="cb19-19"><a href="#cb19-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-20"><a href="#cb19-20" aria-hidden="true" tabindex="-1"></a>        nc.date_created <span class="op">=</span> now.isoformat(<span class="st">"T"</span>, <span class="st">"seconds"</span>)</span>
+<span id="cb19-21"><a href="#cb19-21" aria-hidden="true" tabindex="-1"></a>        nc.<span class="bu">id</span> <span class="op">=</span> <span class="ss">f"netpp_psi_</span><span class="sc">{</span>sensor2<span class="sc">}</span><span class="ss">_modis"</span></span>
+<span id="cb19-22"><a href="#cb19-22" aria-hidden="true" tabindex="-1"></a>        nc.title <span class="op">=</span> <span class="st">", "</span>.join(</span>
+<span id="cb19-23"><a href="#cb19-23" aria-hidden="true" tabindex="-1"></a>            [</span>
+<span id="cb19-24"><a href="#cb19-24" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Unbiased Relative Difference of Net Primary Productivity"</span>,</span>
+<span id="cb19-25"><a href="#cb19-25" aria-hidden="true" tabindex="-1"></a>                <span class="ss">f"VIIRS-</span><span class="sc">{</span>sensor2<span class="sc">.</span>upper()<span class="sc">}</span><span class="ss"> vs MODIS-Aqua "</span>,</span>
+<span id="cb19-26"><a href="#cb19-26" aria-hidden="true" tabindex="-1"></a>                <span class="st">"9km"</span>,</span>
+<span id="cb19-27"><a href="#cb19-27" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Monthly"</span>,</span>
+<span id="cb19-28"><a href="#cb19-28" aria-hidden="true" tabindex="-1"></a>                <span class="st">"2018-2022"</span>,</span>
+<span id="cb19-29"><a href="#cb19-29" aria-hidden="true" tabindex="-1"></a>                <span class="st">"Global"</span>,</span>
+<span id="cb19-30"><a href="#cb19-30" aria-hidden="true" tabindex="-1"></a>            ]</span>
+<span id="cb19-31"><a href="#cb19-31" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb19-32"><a href="#cb19-32" aria-hidden="true" tabindex="-1"></a>        nc.institution <span class="op">=</span> <span class="st">"NOAA/NESDIS/STAR/CoastWatch/WestCoast"</span></span>
+<span id="cb19-33"><a href="#cb19-33" aria-hidden="true" tabindex="-1"></a>        nc.creator_name <span class="op">=</span> <span class="st">"NOAA CoastWatch West Coast Node"</span></span>
+<span id="cb19-34"><a href="#cb19-34" aria-hidden="true" tabindex="-1"></a>        nc.creator_url <span class="op">=</span> <span class="st">"https://coastwatch.pfeg.noaa.gov/"</span></span>
+<span id="cb19-35"><a href="#cb19-35" aria-hidden="true" tabindex="-1"></a>        nc.instrument <span class="op">=</span> <span class="st">"VIIRS, MODIS"</span></span>
+<span id="cb19-36"><a href="#cb19-36" aria-hidden="true" tabindex="-1"></a>        nc.acknowledgement <span class="op">=</span> <span class="st">"The project was supported by funding from the Portfolio Management Branch of NESDIS and NOAA CoastWatch."</span></span>
+<span id="cb19-37"><a href="#cb19-37" aria-hidden="true" tabindex="-1"></a>        nc.contributors <span class="op">=</span> <span class="st">"Dale Robinson, Isaac Shroeder, Ryan Vandermeulen, Jonathan Sherman, Jesse Espinoza, &amp; Madison Richardson"</span></span>
+<span id="cb19-38"><a href="#cb19-38" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb19-39"><a href="#cb19-39" aria-hidden="true" tabindex="-1"></a><span class="co"># Compress and save the temporary file to the final file name</span></span>
+<span id="cb19-40"><a href="#cb19-40" aria-hidden="true" tabindex="-1"></a>myCmd <span class="op">=</span> <span class="st">" "</span>.join(</span>
+<span id="cb19-41"><a href="#cb19-41" aria-hidden="true" tabindex="-1"></a>    [</span>
+<span id="cb19-42"><a href="#cb19-42" aria-hidden="true" tabindex="-1"></a>        <span class="st">"nccopy"</span>,</span>
+<span id="cb19-43"><a href="#cb19-43" aria-hidden="true" tabindex="-1"></a>        <span class="st">"-d6"</span>,</span>
+<span id="cb19-44"><a href="#cb19-44" aria-hidden="true" tabindex="-1"></a>        os.path.join(WORK_DIR, ncgen_ofile_nc),</span>
+<span id="cb19-45"><a href="#cb19-45" aria-hidden="true" tabindex="-1"></a>        os.path.join(ODATA_DIR, nc_filename),</span>
+<span id="cb19-46"><a href="#cb19-46" aria-hidden="true" tabindex="-1"></a>    ]</span>
+<span id="cb19-47"><a href="#cb19-47" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb19-48"><a href="#cb19-48" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"nccopy"</span>, subprocess.call(myCmd, shell<span class="op">=</span><span class="va">True</span>))</span>
+<span id="cb19-49"><a href="#cb19-49" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Processing complete. NetCDF generated:"</span>, nc_filename)</span>
+<span id="cb19-50"><a href="#cb19-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb19-51"><a href="#cb19-51" aria-hidden="true" tabindex="-1"></a><span class="co"># Clean up up temporary file after saving the final output</span></span>
+<span id="cb19-52"><a href="#cb19-52" aria-hidden="true" tabindex="-1"></a>os.remove(os.path.join(WORK_DIR, ncgen_ofile_nc))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Wrote time index 0</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>/var/folders/81/qj7mv_yn7p98wpb9n0np6q8c0000gn/T/ipykernel_16213/2398805930.py:16: DeprecationWarning: `in1d` is deprecated. Use `np.isin` instead.
+  nc['psi'][time_index, :, :] = psi</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Wrote time index 1
+Wrote time index 2
+Wrote time index 3
+Wrote time index 4
+Wrote time index 5
+Wrote time index 6
+Wrote time index 7
+Wrote time index 8
+Wrote time index 9
+Wrote time index 10
+Wrote time index 11
+Wrote time index 12
+Wrote time index 13
+Wrote time index 14
+Wrote time index 15
+Wrote time index 16
+Wrote time index 17
+Wrote time index 18
+Wrote time index 19
+Wrote time index 20
+Wrote time index 21
+Wrote time index 22
+Wrote time index 23
+Wrote time index 24
+Wrote time index 25
+Wrote time index 26
+Wrote time index 27
+Wrote time index 28
+Wrote time index 29
+Wrote time index 30
+Wrote time index 31
+Wrote time index 32
+Wrote time index 33
+Wrote time index 34
+Wrote time index 35
+Wrote time index 36
+Wrote time index 37
+Wrote time index 38
+Wrote time index 39
+Wrote time index 40
+Wrote time index 41
+Wrote time index 42
+Wrote time index 43
+Wrote time index 44
+Wrote time index 45
+Wrote time index 46
+Wrote time index 47
+Wrote time index 48
+Wrote time index 49
+Wrote time index 50
+Wrote time index 51
+Wrote time index 52
+Wrote time index 53
+Wrote time index 54
+Wrote time index 55
+Wrote time index 56
+Wrote time index 57
+Wrote time index 58
+Wrote time index 59
+nccopy 0
+Processing complete. NetCDF generated: netpp_psi_modis_noaa20.nc</code></pre>
+</div>
+</div>
+</section>
+<section id="visualize-results" class="level2">
+<h2 class="anchored" data-anchor-id="visualize-results">Visualize Results</h2>
+<ul>
+<li><p>Open the NetCDF file you just created with xarray.</p></li>
+<li><p>Extract the psi values and calculate the monthly mean across all pixels.</p></li>
+</ul>
+<p>For each month of the timeseries (120-month for SNPP or 60-month for NOAA20) generate the mean ψ<sup>netPP</sup>.</p>
+<p>$ {}^{netPP} = &nbsp;<em>{i=1}^{N} ^{netPP}</em>{i} $</p>
+<ul>
+<li>Where for each month N is the the number of pixels (<i>i</i>) within a month’s grid with ψ<sup>netPP</sup> values .</li>
+</ul>
+<p>Plot the timeseries on an XY graph. * Uncomment the last three lines to save the graph and dataframe.</p>
+<div id="cell-29" class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Open the NetCDF file and extract psi</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>ds <span class="op">=</span> xr.open_dataset(nc_file_path)</span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>da <span class="op">=</span> ds.psi</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Calculate the spatial mean of psi for each month </span></span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a><span class="co"># by averaging across the latitude and longitude dimensions</span></span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>psi_mean <span class="op">=</span> da.mean(dim<span class="op">=</span>[<span class="st">"latitude"</span>, <span class="st">"longitude"</span>], skipna<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Align the dates</span></span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>my_date <span class="op">=</span> pd.to_datetime(da.time.values).<span class="bu">map</span>(<span class="kw">lambda</span> x: x.replace(day<span class="op">=</span><span class="dv">16</span>))</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot the timeseries</span></span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>plot_monthly_psi_timeseries(my_date, psi_mean)</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a><span class="co"># uncomment the next last line to save the figure</span></span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.savefig('my_psi_timeseries.png')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="raw_unbiased_relative_difference_files/figure-html/cell-16-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="visualize-the-spatial-variability-in-the-5-year-monthly-ψ-mean-for-viirs-noaa20---modis-aqua" class="level2">
+<h2 class="anchored" data-anchor-id="visualize-the-spatial-variability-in-the-5-year-monthly-ψ-mean-for-viirs-noaa20---modis-aqua">Visualize the spatial variability in the 5-year monthly ψ mean for VIIRS-NOAA20 - MODIS-Aqua</h2>
+<p>Plot the spatial variability in the 5-year monthly ψ mean. * Uncomment the last line to save the graph.</p>
+<div id="cell-31" class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>plot_spatial_psi_mean(my_date, ds, da, title<span class="op">=</span><span class="vs">r'</span><span class="dv">$\b</span><span class="vs">ar{psi}_{lat/lon}</span><span class="dv">$</span><span class="vs"> Spatial Variability of 2018-2022 Mean'</span>)</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="co"># uncomment the next last line to save the figure</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a><span class="co"># plt.savefig('my_psi_spatial_variability_5yearmean.png')</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="raw_unbiased_relative_difference_files/figure-html/cell-17-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
